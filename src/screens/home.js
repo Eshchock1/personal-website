@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import '../home.scss';
+import linkedin from '../linkedin.png';
+import instagram from '../instagram.png';
+import github from '../github.png';
 import ParallaxMousemove from 'react-parallax-mousemove'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const style={
     outter: {
         background: '#e20025',
@@ -63,111 +66,134 @@ const style={
 
 function Home() {
   return (
-      <div>
-                    <div className="container">
+    <div>
+    <div className="container">
 
-                  <ParallaxMousemove>
-                  <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle1} config={{
-                  xFactor: -0.04,
-                  yFactor: 0.03,
-                  springSettings: {
-                    stiffness: 75,
-                    damping: 5
-                  }
-                }}>
-                <div className="breh">
-                <h1>Eshwara</h1> 
+  <ParallaxMousemove>
+  <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle1} config={{
+  xFactor: -0.04,
+  yFactor: 0.03,
+  springSettings: {
+    stiffness: 75,
+    damping: 5
+  }
+}}>
+<div className="breh">
+<h1>Eshwara</h1> 
 
-                </div>
+</div>
 </ParallaxMousemove.Layer>
 </ParallaxMousemove>
 </div>
+
+
+
+
+<div class="socials">
+  <ul>
+    <li><img src={linkedin} className="social" alt="logo" /></li>
+  <li><img src={github} className="social" alt="logo" /></li>
+  <li><img src={instagram} className="social" alt="logo" /></li>
+  </ul>
+</div>
+
+<div class="links">
+  <a href="#">ABOUT</a>
+
+  <a href="#">CONTACT</a>
+
+  <a href="#">PORTFOLIO</a>
+</div>
+
+
+
+
 <div className="container2">
 <ParallaxMousemove>
 
 <div style={style.bruh3}>
 
 <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle3} config={{
-    xFactor: 0.06,
-    yFactor: -0.1,
-    springSettings: {
-      stiffness: 100,
-      damping: 5
-    }
-  }}>
+xFactor: 0.06,
+yFactor: -0.1,
+springSettings: {
+stiffness: 100,
+damping: 5
+}
+}}>
 <div className="ball3"></div>
 </ParallaxMousemove.Layer>
 </div>
 <div style={style.bruh4}>
 
 <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle4} config={{
-    xFactor: 0.1,
-    yFactor: -0.13,
-    springSettings: {
-      stiffness: 75,
-      damping: 5
-    }
-  }}>
+xFactor: 0.1,
+yFactor: -0.13,
+springSettings: {
+stiffness: 75,
+damping: 5
+}
+}}>
 <div className="ball4"></div>
 </ParallaxMousemove.Layer></div>
 <div style={style.bruh1}>
-  <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle1} config={{
-                  xFactor: 0.1,
-                  yFactor: -0.13,
-                  springSettings: {
-                    stiffness: 75,
-                    damping: 5
-                  }
-                }}>
-              <div className="ball1"></div>
-              </ParallaxMousemove.Layer></div>
+<ParallaxMousemove.Layer layerStyle={style.infoLayerStyle1} config={{
+  xFactor: 0.1,
+  yFactor: -0.13,
+  springSettings: {
+    stiffness: 75,
+    damping: 5
+  }
+}}>
+<div className="ball1"></div>
+</ParallaxMousemove.Layer></div>
 
 </ParallaxMousemove>
 </div>
 <div className="container3">
 
-        <ParallaxMousemove>
-            
+<ParallaxMousemove>
 
 
-              <div style={style.bruh6}>
+
+<div style={style.bruh6}>
 
 <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle5} config={{
-    xFactor: -0.1,
-    yFactor: 0.1,
-    springSettings: {
-      stiffness: 75,
-      damping: 5
-    }
-  }}>
+xFactor: -0.1,
+yFactor: 0.1,
+springSettings: {
+stiffness: 75,
+damping: 5
+}
+}}>
 <div className="ball6"></div>
 </ParallaxMousemove.Layer>
 </div>
 
-            
+
 <div style={style.bruh2}>
 
 <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle2} config={{
-    xFactor: -0.16,
-    yFactor: 0.2,
-    springSettings: {
-      stiffness: 75,
-      damping: 5
-    }
-  }}>
+xFactor: -0.16,
+yFactor: 0.2,
+springSettings: {
+stiffness: 75,
+damping: 5
+}
+}}>
 <div className="ball2"></div>
 </ParallaxMousemove.Layer>
 </div>
 <div style={style.bruh5}>
 
 <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle5} config={{
-    xFactor: -0.17,
-    yFactor: 0.17,
-    springSettings: {
-      stiffness: 75,
-      damping: 5
-    }
-  }}>
+xFactor: -0.17,
+yFactor: 0.17,
+springSettings: {
+stiffness: 75,
+damping: 5
+}
+}}>
 <div className="ball5"></div>
 </ParallaxMousemove.Layer>
 </div>
