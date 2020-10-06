@@ -1,0 +1,110 @@
+html{
+    background: #e20025;
+    overflow: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+
+.ball1 {
+    background-position:center;
+        background-size: cover;background-image: url('ball.png');width:300px;height:300px;border-radius:300px;
+        
+}
+.ball2 {
+    width:200px;height:200px;border-radius:300px;background-position:center;
+        background-size: cover;background-image: url('ball.png');
+        
+
+}
+
+.ball3 {
+    background-position:center;
+        background-size: cover;background-image: url('ball.png');width:500px;height:500px;border-radius:500px;
+        
+}
+
+.ball4 {
+    background-position:center;
+    background-size: cover;background-image: url('ball.png');width:270px;height:270px;border-radius:300px;
+    
+}
+
+.ball5 {
+    background-position:center;
+        background-size: cover;background-image: url('ball.png');width:100px;height:100px;border-radius:300px;
+        
+}
+.ball6 {
+    background-position:center;
+        background-size: cover;background-image: url('ball.png');width:100px;height:100px;border-radius:300px;
+        
+}
+
+.container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    z-index: 3;
+    
+}
+
+.container2{
+    position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.container3{
+    position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    z-index: 4;
+}
+
+.breh {
+    width: 100vw;
+    height: 100vh;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+
+}
+
+.container h1 {
+    color: mix(#fff, #fff, 85%);
+	font-size: calc(1em + 15vw) ;  
+    font-weight: 900;
+    justify-self: center;
+    align-self: center;
+    font-family: 'Poppins', sans-serif;
+	text-shadow: 
+		-0.0075em 0.0075em 0 mix(#fff, #e20025, 64%),
+		0.005em 0.005em 0 mix(#fff, #e20025, 30%),
+		0.01em 0.01em 0 mix(#fff, #e20025, 32%), 
+		0.015em 0.015em mix(#fff, #e20025, 34%), 
+		0.02em 0.02em 0 mix(#fff, #e20025, 36%), 
+		0.025em 0.025em 0 mix(#fff, #e20025, 38%),
+		0.03em 0.03em 0 mix(#fff, #e20025, 40%),
+		0.035em 0.035em 0 mix(#fff, #e20025, 42%);
+
+}
