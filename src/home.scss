@@ -189,6 +189,45 @@ html{
 	display: none;
 }
 
+.menu {
+	position: absolute;
+	z-index: 25;
+	width: 0vw;
+	height: 100vh;
+	background-color: #313131;
+	top:0;
+	right: 0;
+	display: flex;
+	transition:0.6s ease-in-out;
+}
+
+.menuActive {
+	width: 50vw;
+}
+
+.menu ul {
+	list-style: none;
+	list-style-type: none;
+	margin-top: 15vw;
+	margin-left: 5vw;
+}
+.menu ul li {
+	cursor: pointer;
+	margin-bottom: 1.3vw;
+}
+
+.menu ul li a{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	color:white;
+	text-decoration: none;
+	font-size: 5vw;
+	padding-top: 5vw;
+	display: block;
+	text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.425);
+	text-align:left;
+}
+
 
 @media only screen and (max-width: 1366px) {
 	.socials {
@@ -196,13 +235,28 @@ html{
 		left: 1.5vw;
 	}
 	.socials ul li {
-		margin-bottom: 2vw;
+		margin-bottom: 1vw;
 	}
 	.social {
-		height: 80px;
-		width: 80px;
+		height: 70px;
+		width: 70px;
+	}
+	.breh {
+		margin-top: -10vw;
 	}
 	
+	.container h1 {
+		font-size: calc(1em + 14vw) ;  
+	}
+	
+	.container h2 {
+		margin-top: -1vw;
+		font-size: calc(1em + 5vw) ;  
+	
+	}
+	.links a {
+		font-size: 3vw;
+	}
   }
   @media only screen and (max-width: 1365px) {
 	.mobileMenu {
@@ -211,6 +265,7 @@ html{
 	.links {
 		display: none;
 	}
+
   }
   
   @media only screen and (max-width: 1200px) {
@@ -226,15 +281,46 @@ html{
 		left: 1vw;
 	}
 	.socials ul li {
-		margin-bottom: 3vw;
+		margin-bottom: 1vw;
 	}
 	.social {
-		height: 70px;
-		width: 70px;
+		height: 60px;
+		width: 60px;
 	}
 	.mobileMenu {
 		top:6vw;
 		right:6vw;
+	}
+	.ball1 {
+		width:20vw;height:20vw;border-radius:20vw;		
+	}
+	.ball2 {
+		width:16vw;height:16vw;border-radius:20vw;
+	}
+	
+	.ball3 {
+		width:35vw;height:35vw;border-radius:40;	
+	}
+	
+	.ball4 {
+		width:19vw;height:19vw;border-radius:20vw;	
+	}
+	
+	.ball5 {
+		width:8vw;height:8vw;border-radius:20vw;	
+	}
+	.ball6 {
+		width:8vw;height:8vw;border-radius:20vw;		
+	}
+	.menuActive {
+		width: 100vw;
+	}
+	.menu ul {
+		margin-top: 8vh;
+		margin-left: 5vw;
+	}
+	.menu ul li a{
+		padding-top: 3vw;
 	}
   }
 

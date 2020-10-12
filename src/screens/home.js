@@ -66,10 +66,20 @@ export default class Home extends React.Component {
     this.setState({
         open: !this.state.open
     });
+    if (this.state.menuClassList == "menu") {
+      this.setState({
+        menuClassList: "menu menuActive"
+    });
+    }
+    else {
+      this.setState({
+        menuClassList: "menu"
+    });
+    }
 }
 constructor(props) {
   super(props);
-  this.state = { width: 0, height: 0, open:false};
+  this.state = { width: 0, height: 0, open:false, menuClassList:'menu'};
   this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 }
 
@@ -95,15 +105,28 @@ updateWindowDimensions() {
           <HamburgerMenu
     isOpen={this.state.open}
     menuClicked={this.handleClick.bind(this)}
-    width={this.state.width <= 991?0.075 * this.state.width:this.state.width <= 991? 0.06 * this.state.width:this.state.width <= 1366? 0.05 * this.state.width:0}
-    height={this.state.width <= 991? 0.05 * this.state.width:this.state.width <= 1366? 0.04 * this.state.width:0}
-    strokeWidth={this.state.width <= 991? 0.006 * this.state.width:this.state.width <= 1366? 0.005 * this.state.width:0}
+    width={this.state.width <= 768?0.075 * this.state.width:this.state.width <= 991? 0.05 * this.state.width:this.state.width <= 1366? 0.05 * this.state.width:0}
+    height={this.state.width <= 991? 0.04 * this.state.width:this.state.width <= 1366? 0.04 * this.state.width:0}
+    strokeWidth={this.state.width <= 768?0.006 * this.state.width:this.state.width <= 991? 0.004 * this.state.width:this.state.width <= 1366? 0.005 * this.state.width:0}
     rotate={0}
     color='white'
     borderRadius={5}
     animationDuration={0.5}
 />
-          </div>
+</div>
+<div className={this.state.menuClassList}>
+<ul>
+<li>
+<a href="#">ABOUT</a>
+ </li>
+<li>
+<a href="#">CONTACT</a>
+ </li>
+<li>
+<a href="#">PORTFOLIO</a>
+ </li>
+ </ul>
+</div>
             <div className="container">
                 <ParallaxMousemove>
                     <ParallaxMousemove.Layer
