@@ -41,12 +41,12 @@ const style = {
     },
     ballContainer3: {
         position: "absolute",
-        top: "83vh",
+        top: "90vh",
         left: "52vw",
     },
     ballContainer4: {
         position: "absolute",
-        top: "37vh",
+        top: "27vh",
         left: "78vw",
     },
     ballContainer5: {

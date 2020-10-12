@@ -49,7 +49,9 @@ html{
 	left: 0;
 	right: 0;
 	bottom: 0;
-	width: 100%;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 	display: flex;
 	align-items: center;
     justify-content: center;
@@ -63,7 +65,9 @@ html{
 	left: 0;
 	right: 0;
 	bottom: 0;
-	width: 100%;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 	display: flex;
 	align-items: center;
     justify-content: center;
@@ -76,7 +80,9 @@ html{
 	left: 0;
 	right: 0;
 	bottom: 0;
-	width: 100%;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 	display: flex;
 	align-items: center;
     justify-content: center;
@@ -247,5 +253,25 @@ html{
 		top:8vw;
 		right:8vw;
 	}
+	.ball1 {
+		width:30vw;height:30vw;border-radius:30vw;		
+	}
+	.ball2 {
+		width:20vw;height:20vw;border-radius:30vw;
+	}
 	
+	.ball3 {
+		width:50vw;height:50vw;border-radius:60vw;	
+	}
+	
+	.ball4 {
+		width:28vw;height:28vw;border-radius:30vw;	
+	}
+	
+	.ball5 {
+		width:12vw;height:12vw;border-radius:30vw;	
+	}
+	.ball6 {
+		width:12vw;height:12vw;border-radius:30vw;		
+	}
   }
