@@ -1,45 +1,48 @@
 html{
     background: #e20025;
-	overflow: hidden;
 	padding:0;
 	margin:0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap');
+a {
+	cursor: pointer;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 
 .ball1 {
     background-position:center;
-        background-size: cover;background-image: url('ball.png');width:15.6vw;height:15.6vw;border-radius:15.6vw;
+        background-size: cover;background-image: url('ball.png');width:15.6vw;height:15.6vw;border-radius:15.6vw;overflow: hidden;
         
 }
 .ball2 {
     width:10.4vw;height:10.4vw;border-radius:15.6vw;background-position:center;
-        background-size: cover;background-image: url('ball.png');
+        background-size: cover;background-image: url('ball.png');overflow: hidden;
         
 
 }
 
 .ball3 {
     background-position:center;
-        background-size: cover;background-image: url('ball.png');width:26vw;height:26vw;border-radius:26vw;
+        background-size: cover;background-image: url('ball.png');width:26vw;height:26vw;border-radius:26vw;overflow: hidden;
         
 }
 
 .ball4 {
     background-position:center;
-    background-size: cover;background-image: url('ball.png');width:14vw;height:14vw;border-radius:15.6vw;
+    background-size: cover;background-image: url('ball.png');width:14vw;height:14vw;border-radius:15.6vw;overflow: hidden;
     
 }
 
 .ball5 {
     background-position:center;
-        background-size: cover;background-image: url('ball.png');width:5.2vw;height:5.2vw;border-radius:15.6vw;
+        background-size: cover;background-image: url('ball.png');width:5.2vw;height:5.2vw;border-radius:15.6vw;overflow: hidden;
         
 }
 .ball6 {
     background-position:center;
-        background-size: cover;background-image: url('ball.png');width:5.2vw;height:5.2vw;border-radius:15.6vw;
+        background-size: cover;background-image: url('ball.png');width:5.2vw;height:5.2vw;border-radius:15.6vw;overflow: hidden;
         
 }
 
@@ -228,6 +231,158 @@ html{
 	text-align:left;
 }
 
+.appContainer {
+	width:100vw;
+	height:100vh;
+	overflow:hidden; 
+	position:relative;
+	display: flex;
+}
+
+.ContactContainer {
+	position: absolute;
+	left: 2vw;
+	align-self: center;
+	width: calc(100vw - 4vw);
+	margin:0;
+	background-color: white;
+	z-index: 100;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 0;
+	transition: 0.9s ease-in-out;
+}
+.ContactContainerActive {
+	height: calc(100vh - 4vw);
+	box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.15);
+}
+
+.contactInner {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	top:0;
+	left:0;
+	opacity: 0;
+	transition: 0.3s ease-in-out;
+}
+
+.ContactContainerActive .contactInner {
+	opacity: 1;
+	transition: 0.8s ease-in-out;
+	transition-delay: 0.6s;
+}
+
+.ContactContainer .diagonalBackground {
+	background-color: #f7f7f7;
+	width:200vw;
+	height: 50vw;
+	position: absolute;
+	top:60%;
+	transform: rotateZ(-15deg);
+	left: -50%;
+	z-index: 1;
+}
+
+.ContactContainer h3{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	color:black;
+	font-size: 1.1vw;
+	line-height: 0;
+	z-index: 2;
+	margin-bottom: -1vw;
+}
+
+.ContactContainer h1{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	color:black;
+	font-size: 5vw;
+	line-height: 5vw;
+	letter-spacing: -0.25vw;
+	z-index: 2;
+	transition: 0.2s ease-in-out;
+	position: relative;
+}
+
+.ContactContainer h1 ::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 0.2vw;
+	bottom: 0;
+	left: 0;
+	background-color: mix(#3f3f3f, #e20025, 26%);;
+	visibility: hidden;
+	transform: scaleX(0);
+	transition: all 0.3s ease-in-out 0s;
+  }
+
+  .ContactContainer h1 :hover::before {
+	visibility: visible;
+	transform: scaleX(1);
+  }
+
+.ContactContainer h1:hover{
+	color:mix(#3f3f3f, #e20025, 26%);
+}
+
+.ContactContainer h1 .atSymbol {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.ContactContainer .contactMenu {
+	position: absolute;
+	top:3vw;
+	right: 3vw;
+}
+
+.ContactContainer .contactMenu *{
+	cursor: pointer;
+}
+
+.ContactContainer .contactSocials {
+	position: absolute;
+	bottom:5vw;
+	display: flex;
+	flex-direction: row;
+	z-index: 3;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.ContactContainer .contactSocials h2{
+	cursor: pointer;
+	color:black;
+	font-size: 2vw;
+	margin:0 0.5vw;
+	transition: 0.2s ease-in-out;
+}
+
+
+.ContactContainer .contactSocials h2:hover{
+	color:mix(#3f3f3f, #e20025, 26%);
+}
+.ContactContainer .contactSocials h2:hover ~ #currentSocial{
+	opacity: 1;
+}
+
+#currentSocial {
+	transition: 0.2s ease-in-out;
+	opacity: 0;
+}
+.ContactContainer .contactSocials .break {
+	width: 100%;
+	height: 0;
+}
 
 @media only screen and (max-width: 1366px) {
 	.socials {
@@ -327,6 +482,7 @@ html{
   @media only screen and (max-width: 767px) {
 	.socials {
 		left: -2vw;
+		bottom:6vw;
 	}
 	.socials ul li {
 		margin-bottom: 3vw;
@@ -347,7 +503,7 @@ html{
 	}
 	
 	.ball3 {
-		width:50vw;height:50vw;border-radius:60vw;	
+		width:50vw;height:50vw;border-radius:60vw;
 	}
 	
 	.ball4 {
@@ -359,5 +515,12 @@ html{
 	}
 	.ball6 {
 		width:12vw;height:12vw;border-radius:30vw;		
+	}
+	.appContainer {
+		width:100vw;
+		height:100vh;
+		overflow-x:hidden; 
+		overflow-y: visible;
+		position:relative;
 	}
   }

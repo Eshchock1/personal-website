@@ -5,6 +5,8 @@ import instagram from "../instagram.png";
 import github from "../github.png";
 import ParallaxMousemove from "react-parallax-mousemove";
 import HamburgerMenu from 'react-hamburger-menu';
+import { FaLinkedinIn,FaInstagram, FaGithub} from 'react-icons/fa';
+
 const style = {
     layerStyle1: {
         position: "absolute",
@@ -79,7 +81,7 @@ export default class Home extends React.Component {
 }
 constructor(props) {
   super(props);
-  this.state = { width: 0, height: 0, open:false, menuClassList:'menu'};
+  this.state = { width: 0, height: 0, open:false, menuClassList:'menu', currentSocial:'', ContactContainerClassList:'ContactContainer'};
   this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 }
 
@@ -96,11 +98,9 @@ updateWindowDimensions() {
   this.setState({ width: window.innerWidth, height: window.innerHeight });
 }
   render() {
-
-    
   
   return (
-        <div style={{width:"100vw", height:"100vh", overflow:"hidden", position:'relative'}}>
+        <div className="appContainer">
           <div className="mobileMenu">
           <HamburgerMenu
     isOpen={this.state.open}
@@ -120,13 +120,44 @@ updateWindowDimensions() {
 <a href="#">ABOUT</a>
  </li>
 <li>
-<a href="#">CONTACT</a>
+<a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive'})}>CONTACT</a>
  </li>
 <li>
 <a href="#">PORTFOLIO</a>
  </li>
  </ul>
 </div>
+
+
+<div className={this.state.ContactContainerClassList}>
+    <div className="contactInner">
+    <div className="contactMenu">
+    <HamburgerMenu
+    isOpen={true}
+    menuClicked={()=>this.setState({ContactContainerClassList:'ContactContainer'})}
+    width={this.state.width <= 768?0.075 * this.state.width:this.state.width <= 991? 0.05 * this.state.width:this.state.width <= 1366? 0.05 * this.state.width:0.02 * this.state.width}
+    height={this.state.width <= 991? 0.04 * this.state.width:this.state.width <= 1366? 0.04 * this.state.width:0.02 * this.state.width}
+    strokeWidth={this.state.width <= 768?0.006 * this.state.width:this.state.width <= 991? 0.004 * this.state.width:this.state.width <= 1366? 0.005 * this.state.width:0.0015 * this.state.width}
+    rotate={0}
+    color='black'
+    borderRadius={5}
+    animationDuration={0.5}
+/>
+    </div>
+    <div className="diagonalBackground"></div>
+    <h3>Contact me</h3>
+    <h1><a>eshchock1<span className="atSymbol">@</span>gmail.com</a></h1>
+    <div className="contactSocials">
+                        <h2 id="social1" onMouseEnter={()=>this.setState({currentSocial: "Linkedin"})}><FaLinkedinIn/></h2>
+                        <h2 id="social2" onMouseEnter={()=>this.setState({currentSocial: "Github"})}><FaGithub/></h2>
+                        <h2 id="social3" onMouseEnter={()=>this.setState({currentSocial: "Instagram"})}><FaInstagram/></h2>
+                        <div className="break"></div>
+  <h3 id="currentSocial">{this.state.currentSocial}</h3>
+
+            </div>
+</div>
+</div>
+
             <div className="container">
                 <ParallaxMousemove>
                     <ParallaxMousemove.Layer
@@ -163,7 +194,7 @@ updateWindowDimensions() {
             <div class="links">
                 <a href="#">ABOUT</a>
 
-                <a href="#">CONTACT</a>
+                <a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive'})}>CONTACT</a>
 
                 <a href="#">PORTFOLIO</a>
             </div>
