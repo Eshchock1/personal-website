@@ -271,7 +271,7 @@ a {
 	top:0;
 	left:0;
 	opacity: 0;
-	transition: 0.3s ease-in-out;
+	transition: 0.4s ease-in-out;
 }
 
 .ContactContainerActive .contactInner {
@@ -283,7 +283,7 @@ a {
 .ContactContainer .diagonalBackground {
 	background-color: #f7f7f7;
 	width:200vw;
-	height: 50vw;
+	height: 100vh;
 	position: absolute;
 	top:60%;
 	transform: rotateZ(-15deg);
@@ -313,6 +313,12 @@ a {
 	position: relative;
 }
 
+.ContactContainer h1 a{ 
+	text-decoration: none;
+	color:inherit;
+}
+
+
 .ContactContainer h1 ::before {
 	content: "";
 	position: absolute;
@@ -320,7 +326,7 @@ a {
 	height: 0.2vw;
 	bottom: 0;
 	left: 0;
-	background-color: mix(#3f3f3f, #e20025, 26%);;
+	background-color: black;
 	visibility: hidden;
 	transform: scaleX(0);
 	transition: all 0.3s ease-in-out 0s;
@@ -329,6 +335,7 @@ a {
   .ContactContainer h1 :hover::before {
 	visibility: visible;
 	transform: scaleX(1);
+	background-color: mix(#3f3f3f, #e20025, 26%);
   }
 
 .ContactContainer h1:hover{
@@ -412,6 +419,10 @@ a {
 	.links a {
 		font-size: 3vw;
 	}
+	.ContactContainer .contactSocials h2{
+		font-size: 3vw;
+		margin:0 1vw;
+	}
   }
   @media only screen and (max-width: 1365px) {
 	.mobileMenu {
@@ -420,6 +431,37 @@ a {
 	.links {
 		display: none;
 	}
+	.ContactContainer .contactSocials {
+		bottom:5vh;
+	}
+	.ContactContainer .contactMenu {
+		top:7vw;
+		right: 7vw;
+	}
+	
+	
+	.ContactContainer {
+		left: 5vw;
+		width: calc(100vw - 10vw);
+	}
+	.ContactContainerActive {
+		height: calc(100vh - 20vh);
+	}
+.ContactContainer h3{
+	font-size: 2vw;
+	line-height: 0;
+	margin-bottom: -1vw;
+}
+
+.ContactContainer h1{
+	font-size: 7vw;
+	line-height: 7vw;
+	letter-spacing: -0.25vw;
+}
+.ContactContainer .contactSocials h2{
+	font-size: 6vw;
+	margin:0 2vw;
+}
 
   }
   
@@ -480,6 +522,10 @@ a {
   }
 
   @media only screen and (max-width: 767px) {
+	.ContactContainer h3{
+		font-size: 0.9rem;
+		margin-bottom: 0vw;
+	}
 	.socials {
 		left: -2vw;
 		bottom:6vw;

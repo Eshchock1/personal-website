@@ -120,7 +120,7 @@ updateWindowDimensions() {
 <a href="#">ABOUT</a>
  </li>
 <li>
-<a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive'})}>CONTACT</a>
+<a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive', menuClassList:'menu',open: !this.state.open})}>CONTACT</a>
  </li>
 <li>
 <a href="#">PORTFOLIO</a>
@@ -146,11 +146,11 @@ updateWindowDimensions() {
     </div>
     <div className="diagonalBackground"></div>
     <h3>Contact me</h3>
-    <h1><a>eshchock1<span className="atSymbol">@</span>gmail.com</a></h1>
+    <h1><a href="mailto:eshchock1@gmail.com">eshchock1<span className="atSymbol">@</span>gmail.com</a></h1>
     <div className="contactSocials">
-                        <h2 id="social1" onMouseEnter={()=>this.setState({currentSocial: "Linkedin"})}><FaLinkedinIn/></h2>
-                        <h2 id="social2" onMouseEnter={()=>this.setState({currentSocial: "Github"})}><FaGithub/></h2>
-                        <h2 id="social3" onMouseEnter={()=>this.setState({currentSocial: "Instagram"})}><FaInstagram/></h2>
+                        <a href="https://www.linkedin.com/in/eshwar-chockalingam-b07bb11b2/"><h2 id="social1" onMouseEnter={()=>this.setState({currentSocial: "Linkedin"})}><FaLinkedinIn/></h2></a>
+                        <a href="http://github.com/Eshchock1"><h2 id="social2" onMouseEnter={()=>this.setState({currentSocial: "Github"})}><FaGithub/></h2></a>
+                        <a href="https://www.instagram.com/eshwar_chockalingam/"><h2 id="social3" onMouseEnter={()=>this.setState({currentSocial: "Instagram"})}><FaInstagram/></h2></a>
                         <div className="break"></div>
   <h3 id="currentSocial">{this.state.currentSocial}</h3>
 
@@ -176,17 +176,16 @@ updateWindowDimensions() {
                     </ParallaxMousemove.Layer>
                 </ParallaxMousemove>
             </div>
-
             <div class="socials">
                 <ul>
-                    <li>
-                        <img src={linkedin} className="social" alt="logo" />
+                <li>
+                        <a href="https://www.linkedin.com/in/eshwar-chockalingam-b07bb11b2/"><img src={linkedin} className="social" alt="logo" /></a>
                     </li>
                     <li>
-                        <img src={github} className="social" alt="logo" />
+                        <a href="http://github.com/Eshchock1"><img src={github} className="social" alt="logo" /></a>
                     </li>
                     <li>
-                        <img src={instagram} className="social" alt="logo" />
+                        <a href="https://www.instagram.com/eshwar_chockalingam/"><img src={instagram} className="social" alt="logo" /></a>
                     </li>
                 </ul>
             </div>
