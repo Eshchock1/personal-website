@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../home.scss";
+import Icon from "../icon2.png";
 import linkedin from "../linkedin.png";
 import instagram from "../instagram.png";
 import github from "../github.png";
@@ -81,13 +82,21 @@ export default class Home extends React.Component {
 }
 constructor(props) {
   super(props);
-  this.state = { width: 0, height: 0, open:false, menuClassList:'menu', currentSocial:'', ContactContainerClassList:'ContactContainer'};
+  this.state = { width: 0, height: 0, open:false, menuClassList:'menu', currentSocial:'', ContactContainerClassList:'ContactContainer', loading:'loading',website:'websiteContainer'};
   this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 }
 
 componentDidMount() {
   this.updateWindowDimensions();
   window.addEventListener('resize', this.updateWindowDimensions);
+const timer1 = setTimeout(() => {
+  this.setState({loading: 'loading loadingDone1'})
+  this.setState({website: 'websiteContainer websiteContainerActive'})
+}, 500);
+const timer2 = setTimeout(() => {
+    this.setState({loading: 'loading loadingDone1 loadingDone2'})
+  }, 1500);
+  return()=> clearTimeout(timer1, timer2);
 }
 
 componentWillUnmount() {
@@ -100,7 +109,9 @@ updateWindowDimensions() {
   render() {
   
   return (
-        <div className="appContainer">
+    <div className="appContainer">
+        <div className={this.state.loading}><img src={Icon}/></div>
+    <div className={this.state.website}>
           <div className="mobileMenu">
           <HamburgerMenu
     isOpen={this.state.open}
@@ -148,9 +159,9 @@ updateWindowDimensions() {
     <h3>Contact me</h3>
     <h1><a href="mailto:eshchock1@gmail.com">eshchock1<span className="atSymbol">@</span>gmail.com</a></h1>
     <div className="contactSocials">
-                        <a href="https://www.linkedin.com/in/eshwar-chockalingam-b07bb11b2/"><h2 id="social1" onMouseEnter={()=>this.setState({currentSocial: "Linkedin"})}><FaLinkedinIn/></h2></a>
-                        <a href="http://github.com/Eshchock1"><h2 id="social2" onMouseEnter={()=>this.setState({currentSocial: "Github"})}><FaGithub/></h2></a>
-                        <a href="https://www.instagram.com/eshwar_chockalingam/"><h2 id="social3" onMouseEnter={()=>this.setState({currentSocial: "Instagram"})}><FaInstagram/></h2></a>
+    <h2 id="social1" onMouseEnter={()=>this.setState({currentSocial: "Linkedin"})}><a href="https://www.linkedin.com/in/eshwar-chockalingam-b07bb11b2/"><FaLinkedinIn/></a></h2>
+    <h2 id="social2" onMouseEnter={()=>this.setState({currentSocial: "Github"})}> <a href="http://github.com/Eshchock1"><FaGithub/></a></h2>
+                        <h2 id="social3" onMouseEnter={()=>this.setState({currentSocial: "Instagram"})}><a href="https://www.instagram.com/eshwar_chockalingam/"><FaInstagram/></a></h2>
                         <div className="break"></div>
   <h3 id="currentSocial">{this.state.currentSocial}</h3>
 
@@ -285,6 +296,7 @@ updateWindowDimensions() {
                     </div>
                 </ParallaxMousemove>
             </div>
+        </div>
         </div>
     );
   }

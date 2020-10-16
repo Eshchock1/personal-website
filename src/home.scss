@@ -8,6 +8,52 @@ a {
 	cursor: pointer;
 }
 
+.loading {
+	// background-color:#e20025;
+	height: 100vh;
+	width: 100vw;
+	padding: 0;
+	margin:0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	z-index: 200;
+	transition: 1s ease-in-out;
+  }
+
+  .loadingDone1 {
+	opacity: 0;
+}
+
+  .loadingDone2 {
+	display: none;
+  }
+  .loading img{
+	color: white;
+	width: 20vw;
+	height: 20vw;
+  }
+
+  .websiteContainer {
+	width:100vw;
+	height:100vh;
+	overflow:hidden; 
+	position:relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: 1.5s ease-in-out;
+	transition-delay: 1s;
+	transform: scale(0.3);
+}
+
+.websiteContainerActive {
+	opacity: 1;
+	transform: scale(1);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 
@@ -231,12 +277,14 @@ a {
 	text-align:left;
 }
 
-.appContainer {
+.appContainer{
 	width:100vw;
 	height:100vh;
 	overflow:hidden; 
 	position:relative;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .ContactContainer {
@@ -372,6 +420,10 @@ a {
 	font-size: 2vw;
 	margin:0 0.5vw;
 	transition: 0.2s ease-in-out;
+}
+
+.ContactContainer .contactSocials h2 a{
+	color:inherit;
 }
 
 
