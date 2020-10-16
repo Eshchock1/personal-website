@@ -3,7 +3,18 @@ import './App.css';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Home from './screens/home';
 import About from './screens/about';
-function App() {
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+class App extends React.Component {
+  constructor(props){
+    super(props);
+  }
+  componentDidMount(){
+    AOS.init({
+      duration : 2000
+    })
+  }
+  render() {
   return (
     <BrowserRouter>
     <div className="App"> 
@@ -13,6 +24,7 @@ function App() {
     </div>
     </BrowserRouter>
   );
+  }
 }
 
 export default App;

@@ -43,15 +43,15 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	opacity: 0;
-	transition: 1.5s ease-in-out;
-	transition-delay: 1s;
-	transform: scale(0.3);
+	// opacity: 0;
+	// transition: 1.5s ease-in-out;
+	// transition-delay: 1s;
+	// transform: scale(0.3);
 }
 
 .websiteContainerActive {
-	opacity: 1;
-	transform: scale(1);
+	// opacity: 1;
+	// transform: scale(1);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
@@ -71,7 +71,7 @@ a {
 
 .ball3 {
     background-position:center;
-        background-size: cover;background-image: url('ball.png');width:26vw;height:26vw;border-radius:26vw;overflow: hidden;
+        background-size: cover;background-image: url('ball.png');width:26vw;height:26vw;border-radius:26vw;
         
 }
 
@@ -548,7 +548,7 @@ a {
 	}
 	
 	.ball3 {
-		width:35vw;height:35vw;border-radius:40;	
+		width:35vw;height:35vw;border-radius:40vw;	
 	}
 	
 	.ball4 {
