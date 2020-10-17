@@ -3,15 +3,13 @@
   <head>
     <title>Not Found - Eshwara Chock</title>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/icon.png" />
+    <link rel="icon" href="icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Eshwara Chock's Personal Website"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
@@ -25,11 +23,6 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-          }
-          #subcontainer img{
-            color: white;
-            width: 20vw;
-            height: 20vw;
           }
           #subcontainer h1{
             color: white;
@@ -65,15 +58,52 @@
             border-radius: 2vw;
             padding: 0.5vw 2vw;
             -webkit-box-shadow:1vw 1vw 0px 0px #ae142d;
--moz-box-shadow:1vw 1vw 0px 0px #ae142d;
-box-shadow:1vw 1vw 0px 0px #ae142d;
-text-decoration: none;
+            -moz-box-shadow:1vw 1vw 0px 0px #ae142d;
+            box-shadow:1vw 1vw 0px 0px #ae142d;
+            text-decoration: none;
           }
         
           html, body, #container {
             padding: 0;
             margin: 0;
             overflow: hidden;
+          }
+
+          @media only screen and (max-width: 1200px) {
+            #subcontainer h1{
+              font-size:12em;
+              text-align: center;
+              margin-top: 0.4em;
+              text-shadow: 0.035em 0.035em 0 #ae142d;
+            }
+            #subcontainer h2 {
+              font-size: 1.4em;
+              text-align: center;
+              margin-top: -0.5vw;
+            }
+            #subcontainer h6 {
+              font-size: 1em;
+              text-align: center;
+              line-height: 1.5em;
+              margin: 0vw 6vw;
+            }
+  
+            #subcontainer a {
+              margin-top: 2em;
+              font-size: 0.8em;
+              border: 0.3em solid white;
+              border-radius: 2em;
+              padding: 0.3em 1em;
+              -webkit-box-shadow:1vw 1vw 0px 0px #ae142d;
+              -moz-box-shadow:1vw 1vw 0px 0px #ae142d;
+              box-shadow:1vw 1vw 0px 0px #ae142d;
+            }
+          }
+          @media only screen and (max-width: 767px) {
+            #subcontainer h1{
+              font-size: 9em;
+              margin-top: 0.4em;
+            }
           }
     </style>
 </head>
