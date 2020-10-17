@@ -7,7 +7,7 @@ import github from "../github.png";
 import ParallaxMousemove from "react-parallax-mousemove";
 import HamburgerMenu from 'react-hamburger-menu';
 import { FaLinkedinIn,FaInstagram, FaGithub} from 'react-icons/fa';
-
+import cursor from '../cursor'
 const style = {
     layerStyle1: {
         position: "absolute",
@@ -109,8 +109,10 @@ updateWindowDimensions() {
   render() {
   
   return (
+      
     <div className="appContainer">
-        <div className={this.state.loading}><img src={Icon}/></div>
+          <span id="cursor"></span>
+  <div className={this.state.loading}><img src={Icon}/></div>
     <div className={this.state.website}>
           <div className="mobileMenu" data-aos='fade-left' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
           <HamburgerMenu

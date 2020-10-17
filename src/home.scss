@@ -2,11 +2,22 @@ html{
     background: #e20025;
 	padding:0;
 	margin:0;
+	height: 100%;
 }
 
 a {
 	cursor: pointer;
 }
+
+body {
+	min-height: 100%; /* requires for 'mix-blend-mode' */
+  cursor: none;
+  color: #000;
+  background-color: #e20025; /* requires for 'mix-blend-mode' */
+}
+// html {
+// 	cursor: url('./cursor.png'), auto;
+//   }
 
 .loading {
 	// background-color:#e20025;
@@ -246,7 +257,7 @@ a {
 	background-color: #313131;
 	top:0;
 	right: 0;
-	display: flex;
+	display: none;
 	transition:0.6s ease-in-out;
 }
 
@@ -479,6 +490,9 @@ a {
   @media only screen and (max-width: 1365px) {
 	.mobileMenu {
 		display: block;
+	}
+	.menu{
+		display: flex;
 	}
 	.links {
 		display: none;
