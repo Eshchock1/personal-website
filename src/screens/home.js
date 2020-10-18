@@ -92,10 +92,10 @@ componentDidMount() {
 const timer1 = setTimeout(() => {
   this.setState({loading: 'loading loadingDone1'})
   this.setState({website: 'websiteContainer websiteContainerActive'})
-}, 500);
+}, 1000);
 const timer2 = setTimeout(() => {
     this.setState({loading: 'loading loadingDone1 loadingDone2'})
-  }, 1500);
+  }, 2000);
   return()=> clearTimeout(timer1, timer2);
 }
 
@@ -112,9 +112,9 @@ updateWindowDimensions() {
       
     <div className="appContainer">
           <span id="cursor"></span>
-  <div className={this.state.loading}><img src={Icon}/></div>
+  <div className={this.state.loading}  data-aos='zoom-out' data-aos-easing="ease-out-cubic" data-aos-duration="500"><img src={Icon}/></div>
     <div className={this.state.website}>
-          <div className="mobileMenu" data-aos='fade-left' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
+          <div className="mobileMenu" data-aos-anchor="#name" data-aos='fade-left' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
           <HamburgerMenu
     isOpen={this.state.open}
     menuClicked={this.handleClick.bind(this)}
@@ -171,7 +171,7 @@ updateWindowDimensions() {
 </div>
 </div>
 
-            <div className="container" data-aos='fade-up' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
+            <div className="container" id="name" data-aos='zoom-out' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
                 <ParallaxMousemove>
                     <ParallaxMousemove.Layer
                         layerStyle={style.layerStyle6}
@@ -189,7 +189,7 @@ updateWindowDimensions() {
                     </ParallaxMousemove.Layer>
                 </ParallaxMousemove>
             </div>
-            <div class="socials" data-aos='fade-right' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
+            <div class="socials" data-aos-anchor="#name" data-aos='fade-right' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
                 <ul>
                 <li>
                         <a href="https://www.linkedin.com/in/eshwar-chockalingam-b07bb11b2/"><img src={linkedin} className="social" alt="logo" /></a>
@@ -203,7 +203,7 @@ updateWindowDimensions() {
                 </ul>
             </div>
 
-            <div class="links" data-aos='fade-left' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
+            <div class="links" data-aos-anchor="#name" data-aos='fade-left' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
                 <a href="#">ABOUT</a>
 
                 <a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive'})}>CONTACT</a>
@@ -211,7 +211,7 @@ updateWindowDimensions() {
                 <a href="#">PORTFOLIO</a>
             </div>
 
-            <div className="container2" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="750" data-aos-delay="2000">
+            <div className="container2" data-aos-anchor="#name" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="750" data-aos-delay="2000">
                 <ParallaxMousemove>
                     <div style={style.ballContainer3} >
                         <ParallaxMousemove.Layer
@@ -254,7 +254,7 @@ updateWindowDimensions() {
                     </div>
                 </ParallaxMousemove>
             </div>
-            <div className="container3" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="750" data-aos-delay="2300">
+            <div className="container3" data-aos-anchor="#name" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="750" data-aos-delay="2300">
                 <ParallaxMousemove>
                     <div style={style.ballContainer6}>
                         <ParallaxMousemove.Layer

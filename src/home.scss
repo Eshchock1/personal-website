@@ -1,24 +1,7 @@
-html{
-    background: #e20025;
-	padding:0;
-	margin:0;
-	height: 100%;
-}
 
-a {
-	cursor: pointer;
-}
-
-body {
-	min-height: 100%; /* requires for 'mix-blend-mode' */
-  cursor: none;
-  color: #000;
-  background-color: #e20025; /* requires for 'mix-blend-mode' */
-}
-// html {
-// 	cursor: url('./cursor.png'), auto;
-//   }
-
+      a {
+        cursor: pointer;
+      }
 .loading {
 	// background-color:#e20025;
 	height: 100vh;
