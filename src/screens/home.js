@@ -130,13 +130,16 @@ updateWindowDimensions() {
 <div className={this.state.menuClassList}>
 <ul>
 <li>
-<a href="#">ABOUT</a>
+<a>HOME</a>
+ </li>
+ <li>
+<a href="/about">ABOUT</a>
  </li>
 <li>
 <a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive', menuClassList:'menu',open: !this.state.open})}>CONTACT</a>
  </li>
 <li>
-<a href="#">PORTFOLIO</a>
+<a href="/work">PORTFOLIO</a>
  </li>
  </ul>
 </div>
@@ -204,11 +207,10 @@ updateWindowDimensions() {
             </div>
 
             <div class="links" data-aos-anchor="#name" data-aos='fade-left' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
-                <a href="#">ABOUT</a>
-
+                <a>HOME</a>
+                <a href="/about">ABOUT</a>
                 <a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive'})}>CONTACT</a>
-
-                <a href="#">PORTFOLIO</a>
+                <a href="/work">PORTFOLIO</a>
             </div>
 
             <div className="container2" data-aos-anchor="#name" data-aos='zoom-out' data-aos-easing="ease-out-cubic" data-aos-duration="750" data-aos-delay="2000">

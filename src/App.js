@@ -5,6 +5,7 @@ import Home from './screens/home';
 import About from './screens/about';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Portfolio from './screens/portfolio';
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -20,7 +21,8 @@ class App extends React.Component {
     <div className="App"> 
     <Route exact path='/' component={Home}/>      
     <Route path='/home' component={Home}/>      
-    {/* <Route path='/about' component={About}/>       */}
+    <Route path='/about' component={About}/>      
+    <Route path='/work' component={Portfolio}/>      
     </div>
     </BrowserRouter>
   );

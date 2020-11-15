@@ -5,7 +5,7 @@ import { FaLinkedinIn,FaInstagram, FaGithub} from 'react-icons/fa';
 import cursor from '../cursor'
 
 
-export default class About extends React.Component {    
+export default class Portfolio extends React.Component {    
   handleClick() {
     this.setState({
         open: !this.state.open
@@ -62,13 +62,13 @@ updateWindowDimensions() {
 <a href="/">HOME</a>
  </li>
  <li>
-<a>ABOUT</a>
+<a href="/about">ABOUT</a>
  </li>
 <li>
 <a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive', menuClassList:'menu',open: !this.state.open})}>CONTACT</a>
  </li>
 <li>
-<a href="/work">PORTFOLIO</a>
+<a>PORTFOLIO</a>
  </li>
  </ul>
 </div>
@@ -107,9 +107,9 @@ updateWindowDimensions() {
 
 <div class="links" data-aos-anchor="#name" data-aos='fade-left' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
                 <a href="/">HOME</a>
-                <a>ABOUT</a>
+                <a href="/about">ABOUT</a>
                 <a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive'})}>CONTACT</a>
-                <a href="/work">PORTFOLIO</a>
+                <a>PORTFOLIO</a>
             </div>
 
     </div>
