@@ -34,32 +34,32 @@ const style = {
     },
     ballContainer1: {
         position: "absolute",
-        top: "37vh",
+        top: "44vh",
         left: "10vw",
     },
     ballContainer2: {
         position: "absolute",
-        top: "46vh",
+        top: "52vh",
         left: "45vw",
     },
     ballContainer3: {
         position: "absolute",
-        top: "90vh",
+        top: "96vh",
         left: "52vw",
     },
     ballContainer4: {
         position: "absolute",
-        top: "27vh",
+        top: "33vh",
         left: "78vw",
     },
     ballContainer5: {
         position: "absolute",
-        top: "74vh",
+        top: "80vh",
         left: "76vw",
     },
     ballContainer6: {
         position: "absolute",
-        top: "55vh",
+        top: "61vh",
         left: "21vw",
     },
 };
@@ -211,7 +211,7 @@ updateWindowDimensions() {
                 <a href="#">PORTFOLIO</a>
             </div>
 
-            <div className="container2" data-aos-anchor="#name" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="750" data-aos-delay="2000">
+            <div className="container2" data-aos-anchor="#name" data-aos='zoom-out' data-aos-easing="ease-out-cubic" data-aos-duration="750" data-aos-delay="2000">
                 <ParallaxMousemove>
                     <div style={style.ballContainer3} >
                         <ParallaxMousemove.Layer
@@ -254,7 +254,7 @@ updateWindowDimensions() {
                     </div>
                 </ParallaxMousemove>
             </div>
-            <div className="container3" data-aos-anchor="#name" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="750" data-aos-delay="2300">
+            <div className="container3" data-aos-anchor="#name" data-aos='zoom-out' data-aos-easing="ease-out-cubic" data-aos-duration="750" data-aos-delay="2300">
                 <ParallaxMousemove>
                     <div style={style.ballContainer6}>
                         <ParallaxMousemove.Layer

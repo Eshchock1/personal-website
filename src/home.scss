@@ -144,6 +144,7 @@
     justify-self: center;
     align-self: center;
 	font-family: 'Poppins', sans-serif;
+	letter-spacing: -0.02em;
 	text-shadow: 
 	0.035em 0.035em 0 mix(#3f3f3f, #e20025, 32%),
 	0.03em 0.03em 0 mix(#3f3f3f, #e20025, 30%),
@@ -206,9 +207,13 @@
 .links {
 	position: absolute;
 	right:1vw;
-	height: 100vh;
+	top:0;
+	height: 70vh;
+	margin: 15vh 0;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
 	flex-direction: column;
 	z-index: 20;
 }
@@ -219,8 +224,9 @@
 	font-weight: 700;
 	color:white;
 	text-decoration: none;
-	font-size: 2vw;
+	font-size: 4vh;
 	display: block;
+	text-align: left !important;
 	text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.425);
 }
 
