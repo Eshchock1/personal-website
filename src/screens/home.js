@@ -159,7 +159,7 @@ updateWindowDimensions() {
     </div>
     <div className="diagonalBackground"></div>
     <h3>Contact me</h3>
-    <h1><a href="mailto:eshchock1@gmail.com">eshchock1<span className="atSymbol">@</span>gmail.com</a></h1>
+    <h1><a href="mailto:eshchock1@gmail.com">eshchock<span className="noFont" style={{marginLeft:'-0.7vw', marginRight:'0.3vw'}}>1@</span>gmail<span className="noFont" style={{marginRight:'0.2vw'}}>.</span>com</a></h1>
     <div className="contactSocials">
     <h2 id="social1" onMouseEnter={()=>this.setState({currentSocial: "Linkedin"})}><a href="https://www.linkedin.com/in/eshwar-chockalingam-b07bb11b2/"><FaLinkedinIn/></a></h2>
     <h2 id="social2" onMouseEnter={()=>this.setState({currentSocial: "Github"})}> <a href="http://github.com/Eshchock1"><FaGithub/></a></h2>

@@ -1,7 +1,13 @@
 
-      a {
-        cursor: pointer;
-      }
+ @font-face {
+	font-family: 'edition';
+	src: url('Edition-BxnV.ttf'); /* IE9 Compat Modes */
+} 
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&&display=swap');
+
+  a {
+    cursor: pointer;
+}
 .loading {
 	// background-color:#e20025;
 	height: 100vh;
@@ -139,11 +145,11 @@
 .container h1 {
 	color: mix(#fff, #fff, 85%);
 	line-height: 0;
-	font-size: calc(1em + 15vw) ;  
+	font-size: calc(1em + 11vw) ;  
     font-weight: 800;
     justify-self: center;
     align-self: center;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'edition', sans-serif;
 	letter-spacing: -0.02em;
 	text-shadow: 
 	0.035em 0.035em 0 mix(#3f3f3f, #e20025, 32%),
@@ -160,14 +166,14 @@
 
 .container h2 {
 	color: mix(#fff, #fff, 85%);
-	line-height: 0vw;
+	line-height: 2vw;
 	margin-top: -1vw;
 	margin-left: 0.5vw;
 	font-size: calc(1em + 5vw) ;  
     font-weight: 800;
     justify-self: center;
     align-self: center;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'edition', sans-serif;
 	text-shadow: 
 	0.09em 0.09em 0 mix(#3f3f3f, #e20025, 32%),
 	0.08em 0.08em 0 mix(#3f3f3f, #e20025, 30%),
@@ -220,7 +226,7 @@
 
 .links a {
 	transform: rotate(-90deg);
-	font-family: 'Poppins', sans-serif;
+	font-family: 'edition', sans-serif;
 	font-weight: 700;
 	color:white;
 	text-decoration: none;
@@ -266,7 +272,7 @@
 }
 
 .menu ul li a{
-	font-family: 'Poppins', sans-serif;
+	font-family: 'edition', sans-serif;
 	font-weight: 700;
 	color:white;
 	text-decoration: none;
@@ -340,7 +346,7 @@
 }
 
 .ContactContainer h3{
-	font-family: 'Poppins', sans-serif;
+	font-family: 'edition', sans-serif;
 	font-weight: 500;
 	color:black;
 	font-size: 1.1vw;
@@ -350,7 +356,7 @@
 }
 
 .ContactContainer h1{
-	font-family: 'Poppins', sans-serif;
+	font-family: 'edition', sans-serif;
 	font-weight: 600;
 	color:black;
 	font-size: 5vw;
@@ -360,7 +366,6 @@
 	transition: 0.2s ease-in-out;
 	position: relative;
 }
-
 .ContactContainer h1 a{ 
 	text-decoration: none;
 	color:inherit;
@@ -390,7 +395,7 @@
 	color:mix(#3f3f3f, #e20025, 26%);
 }
 
-.ContactContainer h1 .atSymbol {
+.noFont {
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -460,13 +465,12 @@
 	}
 	
 	.container h1 {
-		font-size: calc(1em + 14vw) ;  
+		font-size: calc(1em + 13vw) ;  
 	}
 	
 	.container h2 {
-		margin-top: -1vw;
+		margin-top: 2vw;
 		font-size: calc(1em + 5vw) ;  
-	
 	}
 	.links a {
 		font-size: 3vw;
@@ -577,6 +581,14 @@
   }
 
   @media only screen and (max-width: 767px) {
+	.container h1 {
+		font-size: calc(1em + 11vw) ;  
+	}
+	
+	.container h2 {
+		margin-top: 7vh;
+		font-size: calc(1em + 5vw) ;  
+	}
 	.ContactContainer h3{
 		font-size: 0.9rem;
 		margin-bottom: 0vw;
