@@ -167,7 +167,6 @@
 .container h2 {
 	color: mix(#fff, #fff, 85%);
 	line-height: 2vw;
-	margin-top: -1vw;
 	margin-left: 0.5vw;
 	font-size: calc(1em + 5vw) ;  
     font-weight: 800;
@@ -213,24 +212,23 @@
 .links {
 	position: absolute;
 	right:1vw;
-	top:0;
-	height: 70vh;
-	margin: 15vh 0;
+	top:3vw;
+	right:3vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	justify-content: space-between;
-	flex-direction: column;
+	flex-direction: row;
 	z-index: 20;
 }
 
 .links a {
-	transform: rotate(-90deg);
 	font-family: 'edition', sans-serif;
 	font-weight: 700;
 	color:white;
+	margin:0 2vw;
 	text-decoration: none;
-	font-size: 4vh;
+	font-size: 1.7vw;
 	display: block;
 	text-align: left !important;
 	text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.425);
