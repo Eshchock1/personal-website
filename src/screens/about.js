@@ -3,6 +3,7 @@ import "../home.scss";
 import HamburgerMenu from 'react-hamburger-menu';
 import { FaLinkedinIn,FaInstagram, FaGithub} from 'react-icons/fa';
 import cursor from '../cursor'
+import {Link} from 'react-router-dom';
 
 
 export default class About extends React.Component {    
@@ -59,16 +60,16 @@ updateWindowDimensions() {
     <div className={this.state.menuClassList}>
         <ul>
             <li>
-                <a href="/">HOME</a>
+                <Link to="/">HOME</Link>
             </li>
             <li>
-                <a>ABOUT</a>
+                <Link>ABOUT</Link>
             </li>
             <li>
                 <a onClick={() => this.setState({ ContactContainerClassList: "ContactContainer ContactContainerActive", menuClassList: "menu", open: !this.state.open })}>CONTACT</a>
             </li>
             <li>
-                <a href="/work">PORTFOLIO</a>
+                <Link to="/work">PORTFOLIO</Link>
             </li>
         </ul>
     </div>
@@ -127,10 +128,10 @@ updateWindowDimensions() {
     </div>
 
     <div class="links" data-aos-anchor="#name" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
-        <a href="/">HOME</a>
-        <a>ABOUT</a>
+        <Link to="/">HOME</Link>
+        <Link>ABOUT</Link>
         <a onClick={() => this.setState({ ContactContainerClassList: "ContactContainer ContactContainerActive" })}>CONTACT</a>
-        <a href="/work">PORTFOLIO</a>
+        <Link to="/work">PORTFOLIO</Link>
     </div>
 </div>
     );

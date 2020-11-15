@@ -8,6 +8,8 @@ import ParallaxMousemove from "react-parallax-mousemove";
 import HamburgerMenu from 'react-hamburger-menu';
 import { FaLinkedinIn,FaInstagram, FaGithub} from 'react-icons/fa';
 import cursor from '../cursor'
+import {Link} from 'react-router-dom';
+
 const style = {
     layerStyle1: {
         position: "absolute",
@@ -130,16 +132,16 @@ updateWindowDimensions() {
 <div className={this.state.menuClassList}>
 <ul>
 <li>
-<a>HOME</a>
+<Link>HOME</Link>
  </li>
  <li>
-<a href="/about">ABOUT</a>
+<Link to="/about">ABOUT</Link>
  </li>
 <li>
 <a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive', menuClassList:'menu',open: !this.state.open})}>CONTACT</a>
  </li>
 <li>
-<a href="/work">PORTFOLIO</a>
+<Link to="/work">PORTFOLIO</Link>
  </li>
  </ul>
 </div>
@@ -207,10 +209,10 @@ updateWindowDimensions() {
             </div>
 
             <div class="links" data-aos-anchor="#name" data-aos='fade-left' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
-                <a>HOME</a>
-                <a href="/about">ABOUT</a>
+                <Link>HOME</Link>
+                <Link to="/about">ABOUT</Link>
                 <a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive'})}>CONTACT</a>
-                <a href="/work">PORTFOLIO</a>
+                <Link to="/work">PORTFOLIO</Link>
             </div>
 
             <div className="container2" data-aos-anchor="#name" data-aos='zoom-out' data-aos-easing="ease-out-cubic" data-aos-duration="750" data-aos-delay="2000">
