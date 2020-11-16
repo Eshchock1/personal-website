@@ -1,0 +1,94 @@
+@font-face {
+	font-family: 'edition';
+	src: url('Edition-BxnV.ttf'); /* IE9 Compat Modes */
+} 
+
+.works h1 {
+	font-size: calc(3.2vw);
+    font-weight: 800;
+    justify-self: center;
+	align-self: center;
+	line-height: 0.9;
+	font-family: 'edition', sans-serif;
+	letter-spacing: -0.02em;
+	transition: 0.3s ease-in-out;
+	color: mix(#fff, #fff, 85%);
+}
+
+.works {
+	margin-left: 12%;  
+}
+
+.works:hover h1{
+	color: mix(#fff, #e20025, 50%);
+	text-shadow:none;
+}
+
+.works h1:hover{
+	color: mix(#fff, #fff, 85%);
+}
+
+.description {
+	margin-left: 12%;
+	// margin-top: 5%;
+	width: 40%;
+}
+
+.description hr {
+	background:white;
+	color:white;
+	width:40%;
+	height:0.3vw; 
+	border:none;
+	float: left;
+}
+
+.description h2 {
+	font-size: 2vw;
+	padding-top: 1vw;
+	color: white; 
+	font-family: 'edition', sans-serif;
+}
+
+.description p {
+	font-size: 1vw;
+	color: white; 
+}
+
+.description a {
+	text-decoration: none;
+	font-size: 0.9vw;
+	color: white; 
+	font-family: 'poppins', sans-serif;
+	border:0.12vw solid white;
+	padding: 0.4vw 0.7vw;
+	display: flex;
+	width:fit-content;
+	align-items: center;
+	margin:1.3vw 0 1vw 0;
+}
+
+.description .stats {
+	display: flex;
+	flex-direction: row;
+}
+
+.description .stats div{
+	margin-right: 10%;
+}
+
+.description .stats h4{
+	font-size: 1vw;
+	color: white; 
+	font-family: 'edition', sans-serif;
+	line-height: 0;
+}
+
+.description .stats h6{
+	font-size: 0.9vw;
+	color: white; 
+	font-family: 'poppins', sans-serif;
+	font-weight: 300;
+	margin-top: 0;
+	line-height: 1.5;
+}

@@ -127,7 +127,7 @@ updateWindowDimensions() {
         </div>
     </div>
 
-    <div class="links" data-aos-anchor="#name" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
+    <div class="links" data-aos-anchor="#name" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
         <Link to="/">HOME</Link>
         <Link>ABOUT</Link>
         <a onClick={() => this.setState({ ContactContainerClassList: "ContactContainer ContactContainerActive" })}>CONTACT</a>

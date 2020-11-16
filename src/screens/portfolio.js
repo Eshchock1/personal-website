@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "../home.scss";
+import "../work.scss";
 import HamburgerMenu from 'react-hamburger-menu';
-import { FaLinkedinIn,FaInstagram, FaGithub} from 'react-icons/fa';
+import { FaLinkedinIn,FaInstagram, FaGithub,FaArrowRight} from 'react-icons/fa';
 import cursor from '../cursor'
 import {Link} from 'react-router-dom';
 
@@ -24,7 +25,7 @@ export default class Portfolio extends React.Component {
 }
 constructor(props) {
   super(props);
-  this.state = { width: 0, height: 0, open:false, menuClassList:'menu', currentSocial:'', ContactContainerClassList:'ContactContainer'};
+  this.state = {width: 0, height: 0, open:false, menuClassList:'menu', currentSocial:'', ContactContainerClassList:'ContactContainer', activeWork:''};
   this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 }
 
@@ -42,9 +43,9 @@ updateWindowDimensions() {
   render() {
   
   return (
-    <div className="appContainer">
+    <div className="appContainer" style={{justifyContent:'flex-start'}}>
     <span id="cursor"></span>
-    <div className="mobileMenu" data-aos-anchor="#name" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
+    <div className="mobileMenu" data-aos-anchor="#name" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
         <HamburgerMenu
             isOpen={this.state.open}
             menuClicked={this.handleClick.bind(this)}
@@ -126,8 +127,45 @@ updateWindowDimensions() {
             </div>
         </div>
     </div>
+    
+    
+    {/* content */}
+    
+    
+    <div className="works" style={{textAlign:'left'}} data-aos-anchor="#name" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
+        <h1>SnapSmile</h1>
+        <h1>Quento</h1>
+        <h1>Dulcis</h1>
+        <h1><span className="noFont">2381</span> Robotics</h1>
+        <h1>Dinos of Fury</h1>
+        <h1>Supplant</h1>
+    </div> 
 
-    <div class="links" data-aos-anchor="#name" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
+    <div className="description" style={{textAlign:'left',}} data-aos-anchor="#name" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
+        {/* <hr/> */}
+        <h2>Revolutionary Dental Health</h2>
+        <p>We helped design and developed a platform that would provide visitors with greater clarity, and understanding of how digital media works. Using a simple mechanic that could be invoked at any visitors were offered a summarised version of content that helped succinctly distil the content. Ultimately, proving why Journey Further is a media company that understands clarity at speed.</p>
+        <a>Launch Project&nbsp;<FaArrowRight/></a>
+        <div className="stats">
+            <div>
+                <h4>ROLE</h4>
+                <h6>Mobile Developer</h6>
+            </div>
+            <div>
+                <h4>SKILLS</h4>
+                <h6>UX/UI<br/>React Native<br/>Expo<br/>Figma</h6>
+            </div>
+            <div>
+                <h4>YEAR</h4>
+                <h6>2020</h6>
+            </div>
+        </div>
+    </div> 
+    
+    
+    
+    
+    <div class="links" data-aos-anchor="#name" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
         <Link to="/">HOME</Link>
         <Link to="/about">ABOUT</Link>
         <a onClick={() => this.setState({ ContactContainerClassList: "ContactContainer ContactContainerActive" })}>CONTACT</a>
