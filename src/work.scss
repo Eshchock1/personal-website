@@ -31,7 +31,45 @@
 .description {
 	margin-left: 12%;
 	// margin-top: 5%;
-	width: 40%;
+	width: 45%;
+}
+.description .Tilt {
+	transform-style: preserve-3d !important;
+}
+
+.description #black-board {
+	background-color: #292929;
+	border-radius: 0.5vw;
+	box-shadow: 1px 1px 0px 2px #141414, 
+	2px 2px 0px 2px #141414, 
+	3px 3px 0px 2px #141414, 
+	4px 4px 0px 2px #141414, 
+	5px 5px 0px 2px #141414,
+	6px 6px 0px 2px #141414,
+	7px 7px 0px 2px #141414,
+	8px 8px 0px 2px #141414,
+	9px 9px 0px 2px #141414,
+	10px 10px 0px 2px #141414,
+	11px 11px 0px 2px #141414,
+	12px 12px 0px 2px #141414,
+	13px 13px 0px 2px #141414,
+	14px 14px 0px 2px #141414,
+	15px 15px 0px 2px #141414,
+	16px 16px 0px 2px #141414,
+	17px 17px 0px 2px #141414,
+	18px 18px 0px 2px #141414;
+	padding:0vw 3vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 28vw;
+	transition: 2s ease-in-out;
+	transform-style: preserve-3d !important;
+	transform:rotateY(0);
+}
+
+.description #black-board #textContainer {
+	transform: translateZ(4vw) !important;
 }
 
 .description hr {
