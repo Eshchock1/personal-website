@@ -3,11 +3,22 @@
 	font-family: 'edition';
 	src: url('Edition-BxnV.ttf'); /* IE9 Compat Modes */
 } 
+// MonumentExtended-Ultrabold.otf
+// MonumentExtended-Regular.otf
+// Edition-BxnV.ttf
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&&display=swap');
+
+html, body {
+	scroll-behavior: smooth;
+}
 
   a {
     cursor: pointer;
 }
+.fp-right span{
+	background-color: #363535 !important;
+}
+
 .loading {
 	// background-color:#e20025;
 	height: 100vh;
@@ -187,7 +198,7 @@
 }
 
 .socials {
-	position: absolute;
+	position: fixed;
 	bottom: 3.5vw;
 	left: 1vw;
 	z-index: 20;
@@ -198,19 +209,18 @@
 	list-style-type: none;
 }
 
-
-.social {
-	height: 3vw;
-	width: 3vw;
-}
-
 .socials ul li {
 	cursor: pointer;
 	margin-bottom: 1.3vw;
 }
 
+.socials a {
+	color: white;
+	font-size: 2.5vw;
+}
+
 .links {
-	position: absolute;
+	position: fixed;
 	right:1vw;
 	top:3vw;
 	right:3vw;
@@ -228,10 +238,10 @@
 	color:white;
 	margin:0 2vw;
 	text-decoration: none;
-	font-size: 1.7vw;
+	font-size: 1.5vw;
 	display: block;
 	text-align: left !important;
-	text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.425);
+	// text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.425);
 }
 
 .mobileMenu {
@@ -292,9 +302,7 @@
 }
 
 .ContactContainer {
-	position: absolute;
-	left: 2vw;
-	align-self: center;
+	position: fixed;
 	width: calc(100vw - 4vw);
 	margin:0;
 	background-color: white;

@@ -113,7 +113,7 @@ updateWindowDimensions() {
   return (
       
     <div className="appContainer">
-          <span id="cursor"></span>
+          {/* <span id="cursor"></span> */}
   <div className={this.state.loading}  data-aos='zoom-out' data-aos-easing="ease-out-cubic" data-aos-duration="500"><img src={Icon}/></div>
     <div className={this.state.website}>
           <div className="mobileMenu" data-aos-anchor="#name" data-aos='fade-left' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
@@ -132,16 +132,16 @@ updateWindowDimensions() {
 <div className={this.state.menuClassList}>
 <ul>
 <li>
-<Link>HOME</Link>
+{/* <Link>HOME</Link> */}
  </li>
  <li>
-<Link to="/about">ABOUT</Link>
+{/* <Link to="/about">ABOUT</Link> */}
  </li>
 <li>
 <a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive', menuClassList:'menu',open: !this.state.open})}>CONTACT</a>
  </li>
 <li>
-<Link to="/work">PORTFOLIO</Link>
+<a href="#work">PORTFOLIO</a>
  </li>
  </ul>
 </div>
@@ -181,8 +181,8 @@ updateWindowDimensions() {
                     <ParallaxMousemove.Layer
                         layerStyle={style.layerStyle6}
                         config={{
-                            xFactor: -0.04,
-                            yFactor: 0.03,
+                            xFactor: -0.04 * 0.8,
+                            yFactor: 0.03* 0.8,
                             springSettings: {
                                 stiffness: 75,
                                 damping: 5,
@@ -194,26 +194,7 @@ updateWindowDimensions() {
                     </ParallaxMousemove.Layer>
                 </ParallaxMousemove>
             </div>
-            <div class="socials" data-aos-anchor="#name" data-aos='fade-right' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
-                <ul>
-                <li>
-                        <a href="https://www.linkedin.com/in/eshwar-chockalingam-b07bb11b2/"><img src={linkedin} className="social" alt="logo" /></a>
-                    </li>
-                    <li>
-                        <a href="http://github.com/Eshchock1"><img src={github} className="social" alt="logo" /></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/eshwar_chockalingam/"><img src={instagram} className="social" alt="logo" /></a>
-                    </li>
-                </ul>
-            </div>
 
-            <div class="links" data-aos-anchor="#name" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
-                <Link>HOME</Link>
-                <Link to="/about">ABOUT</Link>
-                <a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive'})}>CONTACT</a>
-                <Link to="/work">PORTFOLIO</Link>
-            </div>
 
             <div className="container2" data-aos-anchor="#name" data-aos='zoom-out' data-aos-easing="ease-out-cubic" data-aos-duration="750" data-aos-delay="1000">
                 <ParallaxMousemove>
@@ -221,8 +202,8 @@ updateWindowDimensions() {
                         <ParallaxMousemove.Layer
                             layerStyle={style.layerStyle3}
                             config={{
-                                xFactor: 0.06,
-                                yFactor: -0.1,
+                                xFactor: 0.06* 0.8,
+                                yFactor: -0.1* 0.8,
                                 springSettings: {
                                     stiffness: 100,
                                     damping: 5,
@@ -234,8 +215,8 @@ updateWindowDimensions() {
                         <ParallaxMousemove.Layer
                             layerStyle={style.layerStyle4}
                             config={{
-                                xFactor: 0.1,
-                                yFactor: -0.13,
+                                xFactor: 0.1* 0.8,
+                                yFactor: -0.13* 0.8,
                                 springSettings: {
                                     stiffness: 75,
                                     damping: 5,
@@ -247,8 +228,8 @@ updateWindowDimensions() {
                         <ParallaxMousemove.Layer
                             layerStyle={style.layerStyle1}
                             config={{
-                                xFactor: 0.1,
-                                yFactor: -0.13,
+                                xFactor: 0.1* 0.8,
+                                yFactor: -0.13* 0.8,
                                 springSettings: {
                                     stiffness: 75,
                                     damping: 5,
@@ -264,8 +245,8 @@ updateWindowDimensions() {
                         <ParallaxMousemove.Layer
                             layerStyle={style.layerStyle5}
                             config={{
-                                xFactor: -0.1,
-                                yFactor: 0.1,
+                                xFactor: -0.1* 0.8,
+                                yFactor: 0.1* 0.8,
                                 springSettings: {
                                     stiffness: 75,
                                     damping: 5,
@@ -278,8 +259,8 @@ updateWindowDimensions() {
                         <ParallaxMousemove.Layer
                             layerStyle={style.layerStyle2}
                             config={{
-                                xFactor: -0.16,
-                                yFactor: 0.2,
+                                xFactor: -0.16* 0.8,
+                                yFactor: 0.2* 0.8,
                                 springSettings: {
                                     stiffness: 75,
                                     damping: 5,
@@ -291,8 +272,8 @@ updateWindowDimensions() {
                         <ParallaxMousemove.Layer
                             layerStyle={style.layerStyle5}
                             config={{
-                                xFactor: -0.17,
-                                yFactor: 0.17,
+                                xFactor: -0.17* 0.8,
+                                yFactor: 0.17* 0.8,
                                 springSettings: {
                                     stiffness: 75,
                                     damping: 5,

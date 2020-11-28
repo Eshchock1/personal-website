@@ -70,8 +70,8 @@ updateWindowDimensions() {
   render() {
   
   return (
-    <div className="appContainer" style={{justifyContent:'flex-start'}}>
-    <span id="cursor"></span>
+    <div className="appContainer" id="work" style={{justifyContent:'flex-start'}}>
+    {/* <span id="cursor"></span> */}
     <div className="mobileMenu" data-aos-anchor="#name" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
         <HamburgerMenu
             isOpen={this.state.open}
@@ -88,16 +88,16 @@ updateWindowDimensions() {
     <div className={this.state.menuClassList}>
         <ul>
             <li>
-                <Link to="/">HOME</Link>
+                {/* <Link to="/">HOME</Link> */}
             </li>
             <li>
-                <Link to="/about">ABOUT</Link>
+                {/* <Link to="/about">ABOUT</Link> */}
             </li>
             <li>
                 <a onClick={() => this.setState({ ContactContainerClassList: "ContactContainer ContactContainerActive", menuClassList: "menu", open: !this.state.open })}>CONTACT</a>
             </li>
             <li>
-                <Link>PORTFOLIO</Link>
+                {/* <Link>PORTFOLIO</Link> */}
             </li>
         </ul>
     </div>
@@ -154,21 +154,7 @@ updateWindowDimensions() {
             </div>
         </div>
     </div>
-    <div class="socials" data-aos-anchor="#name" data-aos='fade-right' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
-                <ul>
-                <li>
-                        <a href="https://www.linkedin.com/in/eshwar-chockalingam-b07bb11b2/"><img src={linkedin} className="social" alt="logo" /></a>
-                    </li>
-                    <li>
-                        <a href="http://github.com/Eshchock1"><img src={github} className="social" alt="logo" /></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/eshwar_chockalingam/"><img src={instagram} className="social" alt="logo" /></a>
-                    </li>
-                </ul>
-            </div>
     
-    {/* content */}
     
     
     <div className="works" style={{textAlign:'left'}} data-aos-anchor="#name" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
@@ -181,8 +167,7 @@ updateWindowDimensions() {
     </div> 
 
     <div className="description" style={{textAlign:'left',}} data-aos-anchor="#name" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
-        {/* <hr/> */}
-        <Tilt className="Tilt" glareEnable={true} glareColor="rgba(61, 61, 61,0.4)" scale={1.05} perspective={2000} tiltMaxAngleX={10} tiltMaxAngleY={10} transitionSpeed={2000}>
+        <Tilt className="Tilt" glareEnable={true} glareColor="rgba(61, 61, 61,0.4)" scale={1.05} perspective={2000} tiltMaxAngleX={10} tiltMaxAngleY={10} transitionSpeed={2000} trackOnWindow={true}>
         <div id="black-board">
             <div id="textContainer">
             {this.state.workContent}
@@ -190,16 +175,6 @@ updateWindowDimensions() {
         </div>
         </Tilt>
     </div> 
-    
-    
-    
-    
-    <div class="links" data-aos-anchor="#name" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
-        <Link to="/">HOME</Link>
-        <Link to="/about">ABOUT</Link>
-        <a onClick={() => this.setState({ ContactContainerClassList: "ContactContainer ContactContainerActive" })}>CONTACT</a>
-        <Link>PORTFOLIO</Link>
-    </div>
 </div>
     );
   }

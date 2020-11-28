@@ -43,7 +43,6 @@ updateWindowDimensions() {
   
   return (
     <div className="appContainer">
-    <span id="cursor"></span>
     <div className="mobileMenu" data-aos-anchor="#name" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
         <HamburgerMenu
             isOpen={this.state.open}
@@ -60,16 +59,16 @@ updateWindowDimensions() {
     <div className={this.state.menuClassList}>
         <ul>
             <li>
-                <Link to="/">HOME</Link>
+                {/* <Link to="/">HOME</Link> */}
             </li>
             <li>
-                <Link>ABOUT</Link>
+                {/* <Link>ABOUT</Link> */}
             </li>
             <li>
                 <a onClick={() => this.setState({ ContactContainerClassList: "ContactContainer ContactContainerActive", menuClassList: "menu", open: !this.state.open })}>CONTACT</a>
             </li>
             <li>
-                <Link to="/work">PORTFOLIO</Link>
+                {/* <Link to="/work">PORTFOLIO</Link> */}
             </li>
         </ul>
     </div>
@@ -125,13 +124,6 @@ updateWindowDimensions() {
                 <h3 id="currentSocial">{this.state.currentSocial}</h3>
             </div>
         </div>
-    </div>
-
-    <div class="links" data-aos-anchor="#name" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
-        <Link to="/">HOME</Link>
-        <Link>ABOUT</Link>
-        <a onClick={() => this.setState({ ContactContainerClassList: "ContactContainer ContactContainerActive" })}>CONTACT</a>
-        <Link to="/work">PORTFOLIO</Link>
     </div>
 </div>
     );
