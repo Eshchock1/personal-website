@@ -95,11 +95,40 @@ updateWindowDimensions() {
 <div class="links" data-aos-anchor="#name" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
         {/* <Link to="/">HOME</Link> */}
         {/* <Link to="/about">ABOUT</Link> */}
-        {/* <a onClick={()=> window.fullpage_api.moveTo(2)}>About</a> */}
+        <a onClick={()=> window.fullpage_api.moveTo(1)}>Intro</a>
         <a onClick={()=> window.fullpage_api.moveTo(2)}>Portfolio</a>
         <a onClick={() => this.setState({ ContactContainerClassList: "ContactContainer ContactContainerActive" })}>CONTACT</a>
 
     </div>
+    <div className="mobileMenu" data-aos-anchor="#name" data-aos='fade-left' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
+          <HamburgerMenu
+    isOpen={this.state.open}
+    menuClicked={this.handleClick.bind(this)}
+    width={this.state.width <= 768?0.075 * this.state.width:this.state.width <= 991? 0.05 * this.state.width:this.state.width <= 1366? 0.05 * this.state.width:0}
+    height={this.state.width <= 991? 0.04 * this.state.width:this.state.width <= 1366? 0.04 * this.state.width:0}
+    strokeWidth={this.state.width <= 768?0.006 * this.state.width:this.state.width <= 991? 0.004 * this.state.width:this.state.width <= 1366? 0.005 * this.state.width:0}
+    rotate={0}
+    color='white'
+    borderRadius={5}
+    animationDuration={0.5}
+/>
+</div>
+<div className={this.state.menuClassList}>
+<ul>
+<li>
+{/* <Link>HOME</Link> */}
+ </li>
+ <li>
+ <a onClick={()=> window.fullpage_api.moveTo(1)}>Intro</a>
+ </li>
+
+<li>
+        <a onClick={()=> window.fullpage_api.moveTo(2)}>Portfolio</a> </li>
+        <li>
+<a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive', menuClassList:'menu',open: !this.state.open})}>CONTACT</a>
+ </li>
+ </ul>
+</div>
     <div class="socials" data-aos-anchor="#name" data-aos='fade-right' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
                 <ul>
                 <li>
