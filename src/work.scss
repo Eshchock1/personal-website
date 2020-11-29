@@ -37,14 +37,19 @@
 	color: mix(#fff, #fff, 85%);
 }
 
-
-.works:hover h1{
-	color: mix(#fff, #e20025, 50%);
-	text-shadow:none;
+.worksActives h1{
+	color: rgba(255, 255, 255, 0.5);
 }
 
+
+.works:hover h1{
+	color: rgba(255, 255, 255, 0.5);
+}
+
+
+
 .works h1:hover{
-	color: mix(#fff, #fff, 85%);
+	color:#fff;
 }
 
 .description {

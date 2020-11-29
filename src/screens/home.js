@@ -84,7 +84,7 @@ export default class Home extends React.Component {
 }
 constructor(props) {
   super(props);
-  this.state = { width: 0, height: 0, open:false, menuClassList:'menu', currentSocial:'', ContactContainerClassList:'ContactContainer', loading:'loading',website:'websiteContainer'};
+  this.state = { width: 0, height: 0, loading:'loading',website:'websiteContainer'};
   this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 }
 
