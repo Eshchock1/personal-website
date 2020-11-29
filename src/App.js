@@ -119,9 +119,17 @@ updateWindowDimensions() {
 <li>
         <a onClick={()=> {window.fullpage_api.moveTo(2);this.setState({menuClassList: "menu",open: !this.state.open});}}>Portfolio</a> </li>
         <li>
-<a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive', menuClassList:'menu',open: !this.state.open})}>CONTACT</a>
+<a href="mailto:eshchock1@gmail.com">CONTACT</a>
+ </li>
+ <li>
+ <div class="mobileSocials">
+ <h2><a href="https://www.linkedin.com/in/eshwar-chockalingam-b07bb11b2/"><FaLinkedinIn/></a></h2>
+    <h2> <a href="http://github.com/Eshchock1"><FaGithub/></a></h2>
+                        <h2><a href="https://www.instagram.com/eshwar_chockalingam/"><FaInstagram/></a></h2>
+ </div>
  </li>
  </ul>
+ 
 </div>
     <div class="socials" data-aos-anchor="#name" data-aos='fade-right' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
                 <ul>

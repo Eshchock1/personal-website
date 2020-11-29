@@ -454,6 +454,20 @@ html, body {
 	height: 0;
 }
 
+.mobileSocials {
+	position: relative;
+	flex-direction: row;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.mobileSocials h2 a{
+	color:#fff;
+	font-size: 1.2em !important;
+	margin-right: 1em;
+}
+
 @media only screen and (max-width: 1366px) {
 	.socials {
 		display: none;
@@ -488,38 +502,6 @@ html, body {
 	.links {
 		display: none;
 	}
-	.ContactContainer .contactSocials {
-		bottom:5vh;
-	}
-	.ContactContainer .contactMenu {
-		top:7vw;
-		right: 7vw;
-	}
-	
-	
-	.ContactContainer {
-		left: 5vw;
-		width: calc(100vw - 10vw);
-	}
-	.ContactContainerActive {
-		height: calc(100vh - 20vh);
-	}
-.ContactContainer h3{
-	font-size: 2vw;
-	line-height: 0;
-	margin-bottom: -1vw;
-}
-
-.ContactContainer h1{
-	font-size: 7vw;
-	line-height: 7vw;
-	letter-spacing: -0.25vw;
-}
-.ContactContainer .contactSocials h2{
-	font-size: 6vw;
-	margin:0 2vw;
-}
-
   }
   
 
@@ -569,21 +551,6 @@ html, body {
 	.container h2 {
 		margin-top: 7vh;
 		font-size: calc(1em + 5vw) ;  
-	}
-	.ContactContainer h3{
-		font-size: 0.9rem;
-		margin-bottom: 0vw;
-	}
-	.socials {
-		left: -2vw;
-		bottom:6vw;
-	}
-	.socials ul li {
-		margin-bottom: 3vw;
-	}
-	.social {
-		height: 40px;
-		width: 40px;
 	}
 	.mobileMenu {
 		top:5vh;
