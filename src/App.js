@@ -11,7 +11,7 @@ import cursor from './cursor'
 import "./home.scss";
 import {Link} from 'react-router-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
-import { FaLinkedinIn,FaInstagram, FaGithub} from 'react-icons/fa';
+import { FaLinkedinIn,FaInstagram, FaGithub, FaChevronLeft, FaArrowRight} from 'react-icons/fa';
 import HamburgerMenu from 'react-hamburger-menu';
 
 class App extends React.Component {
@@ -88,9 +88,6 @@ updateWindowDimensions() {
 </div>
 </div>
 
-
-
-
 <span id="cursor"></span>
 <div class="links" data-aos-anchor="#name" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
         {/* <Link to="/">HOME</Link> */}
@@ -115,15 +112,12 @@ updateWindowDimensions() {
 </div>
 <div className={this.state.menuClassList}>
 <ul>
-<li>
-{/* <Link>HOME</Link> */}
- </li>
  <li>
- <a onClick={()=> {window.fullpage_api.moveTo(1);this.setState({menuClassList: "menu"});}}>Intro</a>
+ <a onClick={()=> {window.fullpage_api.moveTo(1);this.setState({menuClassList: "menu",open: !this.state.open});}}>Intro</a>
  </li>
 
 <li>
-        <a onClick={()=> {window.fullpage_api.moveTo(2);this.setState({menuClassList: "menu"});}}>Portfolio</a> </li>
+        <a onClick={()=> {window.fullpage_api.moveTo(2);this.setState({menuClassList: "menu",open: !this.state.open});}}>Portfolio</a> </li>
         <li>
 <a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive', menuClassList:'menu',open: !this.state.open})}>CONTACT</a>
  </li>

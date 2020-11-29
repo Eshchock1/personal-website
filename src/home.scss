@@ -245,7 +245,7 @@ html, body {
 
 .mobileMenu {
 	position:fixed;
-	top:8vw;
+	top:5vh;
 	right:8vw;
 	z-index:30;
 	display: none;
@@ -525,7 +525,7 @@ html, body {
 
   @media only screen and (max-width: 991px) {
 	.mobileMenu {
-		top:6vw;
+		top:5vh;
 		right:6vw;
 	}
 	.ball1 {
@@ -586,7 +586,7 @@ html, body {
 		width: 40px;
 	}
 	.mobileMenu {
-		top:8vw;
+		top:5vh;
 		right:8vw;
 	}
 	.ball1 {
