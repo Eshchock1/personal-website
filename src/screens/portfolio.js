@@ -75,7 +75,7 @@ updateWindowDimensions() {
 
     
     
-    
+    <div className="flexContainer1">
     <div className="works" style={{textAlign:'left'}} data-aos-anchor="#name" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
         <h1 data-id="0" onClick={()=>this.handleWorkClick(0)}>SnapSmile</h1>
         <h1 data-id="1" onClick={()=>this.handleWorkClick(1)}>Quento</h1>
@@ -84,7 +84,8 @@ updateWindowDimensions() {
         <h1 data-id="4" onClick={()=>this.handleWorkClick(4)}>Dinos of Fury</h1>
         <h1 data-id="5" onClick={()=>this.handleWorkClick(5)}>Supplant</h1>
     </div> 
-
+    </div>
+    <div className="flexContainer2">
     <div className="description" style={{textAlign:'left',}} data-aos-anchor="#name" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
         <Tilt className="Tilt" glareEnable={true} glareColor="rgba(61, 61, 61,0.4)" scale={1.05} perspective={2000} tiltMaxAngleX={10} tiltMaxAngleY={10} transitionSpeed={2000} trackOnWindow={true}>
         <div id="black-board">
@@ -94,6 +95,7 @@ updateWindowDimensions() {
         </div>
         </Tilt>
     </div> 
+    </div>
 </div>
     );
   }

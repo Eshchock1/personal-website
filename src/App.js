@@ -119,11 +119,11 @@ updateWindowDimensions() {
 {/* <Link>HOME</Link> */}
  </li>
  <li>
- <a onClick={()=> window.fullpage_api.moveTo(1)}>Intro</a>
+ <a onClick={()=> {window.fullpage_api.moveTo(1);this.setState({menuClassList: "menu"});}}>Intro</a>
  </li>
 
 <li>
-        <a onClick={()=> window.fullpage_api.moveTo(2)}>Portfolio</a> </li>
+        <a onClick={()=> {window.fullpage_api.moveTo(2);this.setState({menuClassList: "menu"});}}>Portfolio</a> </li>
         <li>
 <a onClick={()=>this.setState({ContactContainerClassList:'ContactContainer ContactContainerActive', menuClassList:'menu',open: !this.state.open})}>CONTACT</a>
  </li>
