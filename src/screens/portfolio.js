@@ -49,7 +49,7 @@ handleWorkClick(number){
     document.getElementById("black-board").style.transform = 'rotateY(' + this.state.rotation + 'deg)';
     // document.getElementById("black-board").style.transition = "2s cubic-bezier(0.175, 0.885, 0.32, 1.275)"
     this.setState({rotation:this.state.rotation+360})
-    if (this.state.width <= 1366) {
+    if (this.state.width < 1366) {
       this.setState({workContent:content[number]})
     }
     else {

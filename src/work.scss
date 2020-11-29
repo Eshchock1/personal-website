@@ -161,6 +161,7 @@
 	background-color: #292929;
 	z-index: 1000;
 	transition: 1s ease-in-out;
+	display: none;
 }
 
 .mobileWorkMenuActive {
@@ -233,6 +234,10 @@
 
 
 @media only screen and (max-width: 1365px) {
+	.mobileWorkMenu {
+		display: block;
+	}
+
 	.flexContainer1 {
 		flex:1;
 	}
