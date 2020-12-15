@@ -1,37 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import "../home.scss";
 import "../work.scss";
-import HamburgerMenu from 'react-hamburger-menu';
-import { FaLinkedinIn,FaInstagram, FaGithub,FaArrowRight,FaChevronLeft} from 'react-icons/fa';
-import cursor from '../cursor'
-import linkedin from "../linkedin.png";
-import instagram from "../instagram.png";
-import github from "../github.png";
-import {Link} from 'react-router-dom';
-// import Tilt from 'react-tilt'
+import {FaArrowRight,FaChevronLeft} from 'react-icons/fa';
 import Tilt from 'react-parallax-tilt';
 
 
 export default class Portfolio extends React.Component {    
-  handleClick() {
-    this.setState({
-        open: !this.state.open
-    });
-    if (this.state.menuClassList == "menu") {
-      this.setState({
-        menuClassList: "menu menuActive"
-    });
-    }
-    else {
-      this.setState({
-        menuClassList: "menu"
-    });
-    }
-}
 constructor(props) {
   super(props);
-  this.state = {width: 0, height: 0, activeWork:0, rotation:360, mobileWorkMenuClassList:"mobileWorkMenu", workClassList:'works', workContent:<div><h2>Revolutionary Dental Health</h2><p>We helped design and developed a platform that would provide visitors with greater clarity, and understanding of how digital media works. Using a simple mechanic that could be invoked at any visitors were offered a summarised version of content that helped succinctly distil the content. Ultimately, proving why Journey Further is a media company that understands clarity at speed.</p><a>Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Mobile Engineer</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>React Native<br/>Figma<br/>Dialogflow</h6></div><div><h4>YEAR</h4><h6>2020</h6></div></div></div>,};
-  this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  this.state = {activeWork:0, rotation:360, mobileWorkMenuClassList:"mobileWorkMenu", workClassList:'works', workContent:<div><h2>Revolutionary Dental Health</h2><p>We helped design and developed a platform that would provide visitors with greater clarity, and understanding of how digital media works. Using a simple mechanic that could be invoked at any visitors were offered a summarised version of content that helped succinctly distil the content. Ultimately, proving why Journey Further is a media company that understands clarity at speed.</p><a>Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Mobile Engineer</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>React Native<br/>Figma<br/>Dialogflow</h6></div><div><h4>YEAR</h4><h6>2020</h6></div></div></div>,};
 }
 
 handleWorkClick(number){
@@ -47,7 +24,6 @@ handleWorkClick(number){
         <div><div><h2>A Path To Sustainability</h2><p>We helped design and developed a platform that would provide visitors with greater clarity, and understanding of how digital media works. Using a simple mechanic that could be invoked at any visitors were offered a summarised version of content that helped succinctly distil the content. Ultimately, proving why Journey Further is a media company that understands clarity at speed.</p><a>Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Creator</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>React Native<br/>ML/AI<br/>Visual Design</h6></div><div><h4>YEAR</h4><h6>2020</h6></div></div></div></div>
     ]
     document.getElementById("black-board").style.transform = 'rotateY(' + this.state.rotation + 'deg)';
-    // document.getElementById("black-board").style.transition = "2s cubic-bezier(0.175, 0.885, 0.32, 1.275)"
     this.setState({rotation:this.state.rotation+360})
     if (this.state.width < 1366) {
       this.setState({workContent:content[number]})
@@ -57,24 +33,11 @@ handleWorkClick(number){
         this.setState({workContent:content[number]})
       }, 1200);
       const timer2 = setTimeout(() => {
-        // document.getElementById("black-board").style.transition = "0s"
       }, 2000);
       return()=> clearTimeout(timer1, timer2);
 
     }
       
-}
-
-componentDidMount() {
-  this.updateWindowDimensions();
-}
-
-componentWillUnmount() {
-  window.removeEventListener('resize', this.updateWindowDimensions);
-}
-
-updateWindowDimensions() {
-  this.setState({ width: window.innerWidth, height: window.innerHeight });
 }
   render() {
   

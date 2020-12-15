@@ -1,17 +1,13 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Route} from 'react-router-dom';
 import Home from './screens/home';
 import About from './screens/about';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Portfolio from './screens/portfolio';
-import ScrollableContainer from "react-full-page-scroll";
-import cursor from './cursor'
 import "./home.scss";
-import {Link} from 'react-router-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
-import { FaLinkedinIn,FaInstagram, FaGithub, FaChevronLeft, FaArrowRight} from 'react-icons/fa';
+import { FaLinkedinIn,FaInstagram, FaGithub, } from 'react-icons/fa';
 import HamburgerMenu from 'react-hamburger-menu';
 
 class App extends React.Component {
@@ -90,10 +86,9 @@ updateWindowDimensions() {
 
 <span id="cursor"></span>
 <div class="links" data-aos-anchor="#name" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
-        {/* <Link to="/">HOME</Link> */}
-        {/* <Link to="/about">ABOUT</Link> */}
         <a onClick={()=> window.fullpage_api.moveTo(1)}>Intro</a>
-        <a onClick={()=> window.fullpage_api.moveTo(2)}>Portfolio</a>
+        <a onClick={()=> window.fullpage_api.moveTo(2)}>About</a>
+        <a onClick={()=> window.fullpage_api.moveTo(3)}>Portfolio</a>
         <a onClick={() => this.setState({ ContactContainerClassList: "ContactContainer ContactContainerActive" })}>CONTACT</a>
 
     </div>
@@ -115,9 +110,12 @@ updateWindowDimensions() {
  <li>
  <a onClick={()=> {window.fullpage_api.moveTo(1);this.setState({menuClassList: "menu",open: !this.state.open});}}>Intro</a>
  </li>
+ <li>
+ <a onClick={()=> {window.fullpage_api.moveTo(2);this.setState({menuClassList: "menu",open: !this.state.open});}}>About</a>
+ </li>
 
 <li>
-        <a onClick={()=> {window.fullpage_api.moveTo(2);this.setState({menuClassList: "menu",open: !this.state.open});}}>Portfolio</a> </li>
+        <a onClick={()=> {window.fullpage_api.moveTo(3);this.setState({menuClassList: "menu",open: !this.state.open});}}>Portfolio</a> </li>
         <li>
 <a href="mailto:eshchock1@gmail.com">CONTACT</a>
  </li>
@@ -158,9 +156,9 @@ render={({ state, fullpageApi }) => {
         
         <Home/>
         </div>
-        {/* <div className="section">
+        <div className="section">
           <About/>
-          </div> */}
+          </div>
     <div className="section">
     <Portfolio/>
     </div>
