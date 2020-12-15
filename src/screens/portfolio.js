@@ -35,9 +35,9 @@ constructor(props) {
 }
 
 handleWorkClick(number){
-    document.getElementById("work" + this.state.activeWork).style.color = 'rgba(255, 255, 255, 0.5)';
+    document.getElementById("work" + this.state.activeWork).classList.remove('currentWorkActive');
     this.setState({activeWork:number, workClassList:"works worksActives", mobileWorkMenuClassList:'mobileWorkMenu mobileWorkMenuActive'})
-    document.getElementById("work" + number).style.color = '#fff';
+    document.getElementById("work" + number).classList.add('currentWorkActive');
     const content = [
         <div><div><h2>Revolutionary Dental Health</h2><p>We helped design and developed a platform that would provide visitors with greater clarity, and understanding of how digital media works. Using a simple mechanic that could be invoked at any visitors were offered a summarised version of content that helped succinctly distil the content. Ultimately, proving why Journey Further is a media company that understands clarity at speed.</p><a>Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Mobile Engineer</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>React Native<br/>Figma<br/>Dialogflow</h6></div><div><h4>YEAR</h4><h6>2020</h6></div></div></div></div>,
         <div><div><h2>Learning Just Got Easier</h2><p>We helped design and developed a platform that would provide visitors with greater clarity, and understanding of how digital media works. Using a simple mechanic that could be invoked at any visitors were offered a summarised version of content that helped succinctly distil the content. Ultimately, proving why Journey Further is a media company that understands clarity at speed.</p><a>Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Co-Founder</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>Vue.js<br/>HTML<br/>CSS</h6></div><div><h4>YEAR</h4><h6>2020</h6></div></div></div></div>,
