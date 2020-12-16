@@ -1,0 +1,145 @@
+@keyframes wave {
+    0% {transform: rotate(0deg)}
+    10% {transform: rotate(-15deg)}
+    20% {transform: rotate(15deg)}
+    30% {transform: rotate(-15deg)}
+    40% {transform: rotate(0deg)}
+  }
+
+.animatedWave {
+    display: inline-block;
+    animation-iteration-count: infinite; 
+    animation-name: wave;
+    animation-duration: 3s;
+}
+
+
+.outerContainer {
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    height:100%;
+}
+
+.outerContainer .textContainer {
+    display:flex;
+    flex-direction:column;
+    flex:0.5;
+    height:100%; 
+    align-items:flex-start;
+    padding-left:15%;
+    justify-content:center, 
+}
+
+.outerContainer .emojiContainer {
+    display:flex; 
+    flex-direction:column; 
+    flex:0.5; 
+    height:100%; 
+    align-items:flex-start; 
+    justify-content:center;
+}
+
+.textContainer .title {
+    color:white;
+    font-size:4vw; 
+    font-family:edition;
+    margin:0;
+}
+
+.textContainer .subtitle {
+    color:white;
+    font-size:1.3vw;
+    font-family:Poppins; 
+    font-weight:400; 
+    width:80%;
+}
+
+.textContainer .content {
+    color:white; 
+    font-size:1vw; 
+    font-family:Poppins; 
+    font-weight:300; 
+    width:80%; 
+    margin-top:-0.5vw; 
+}
+
+.emojiContainer .emoji {
+    width:40vw;
+    height:40vw;
+    margin-left:-5vw;
+}
+
+@media only screen and (max-width: 1200px) {
+    .outerContainer {
+        flex-direction:column;
+        position: absolute;
+        top:6vh;
+    }
+    
+    .outerContainer .textContainer {
+        flex:0.65;
+        justify-content: center;
+        align-items:flex-start;
+        margin-top:-5%;
+        padding-top:0;
+        padding-left: 10%;
+    }
+    
+    .outerContainer .emojiContainer {
+        flex:0.35; 
+        align-items:center; 
+        justify-content:flex-start;
+    }
+    
+    .textContainer .title {
+        font-size:3em; 
+        margin:0;
+    }
+    
+    .textContainer .subtitle {
+        font-size:1.5em;
+        width:85%;
+        font-weight: 500;
+        margin:0.5em 0;
+    }
+    
+    .textContainer .content {
+        font-size:1.2em; 
+        width:85%; 
+        margin-top:-0.3em; 
+    }
+    .emojiContainer .emoji {
+        width:33vh;
+        height:33vh;
+        margin-top: -4em;
+    }
+} 
+
+
+@media only screen and (max-width: 767px) { 
+    
+.outerContainer {
+    top:4vh;
+}
+
+.outerContainer .textContainer {
+    justify-content: flex-start;
+    margin-top:0;
+}
+
+.textContainer .title {
+    font-size:1.8em; 
+}
+
+.textContainer .subtitle {
+    font-size:0.85em;
+}
+
+.textContainer .content {
+    font-size:0.8em; 
+}
+.emojiContainer .emoji {
+    margin-top: -8.5vh;
+}
+}
