@@ -9,8 +9,60 @@
 // Edition-BxnV.ttf
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&&display=swap');
 
+  .strike {
+	position: relative;
+  }
+  .strike::after {
+	content: ' ';
+	position: absolute;
+	top: calc(50% - 0.15vw);
+	left: -0.5vw;
+	width: 0;
+	height: 0.3vw;
+	background: white;
+	transition: 0.5s ease-in-out;
+  }
+
+  .activeStrike::after {
+	width: calc(100% + 0.8vw);
+}
+
+#scrollDownContainer {
+	position: absolute;
+	bottom: 5vh;
+	color:white;
+	font-size: 2vw;
+	animation: bounce 2s ease-in-out 3s infinite;
+}
+
+@keyframes bounce {
+	0%,
+	100%,
+	20%,
+	50%,
+	80% {
+	  -webkit-transform: translateY(0);
+	  -ms-transform: translateY(0);
+	  transform: translateY(0);
+	}
+	40% {
+	  -webkit-transform: translateY(-10px);
+	  -ms-transform: translateY(-10px);
+	  transform: translateY(-10px);
+	}
+	60% {
+	  -webkit-transform: translateY(-5px);
+	  -ms-transform: translateY(-5px);
+	  transform: translateY(-5px);
+	}
+  }
+  
+
+
+
 html, body {
 	scroll-behavior: smooth;
+	cursor: none;
 }
 
   a {
@@ -486,7 +538,7 @@ html, body {
 		font-size: calc(1em + 5vw) ;  
 	}
 	.links a {
-		font-size: 3vw;
+		font-size: 1.8vw;
 	}
 	.ContactContainer .contactSocials h2{
 		font-size: 3vw;
@@ -503,6 +555,9 @@ html, body {
 	.links {
 		display: none;
 	}
+	#scrollDownContainer {
+		font-size: 2.5em;
+	}
   }
   
 
@@ -510,6 +565,10 @@ html, body {
 	.mobileMenu {
 		top:5vh;
 		right:6vw;
+	}
+	#scrollDownContainer {
+		bottom: 4vh;
+		font-size: 1.5em;
 	}
 	.ball1 {
 		width:20vw;height:20vw;border-radius:20vw;		

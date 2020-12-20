@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 import Portfolio from './screens/portfolio';
 import "./home.scss";
 import ReactFullpage from '@fullpage/react-fullpage';
-import { FaLinkedinIn,FaInstagram, FaGithub, } from 'react-icons/fa';
+import { FaLinkedinIn,FaInstagram, FaGithub} from 'react-icons/fa';
 import HamburgerMenu from 'react-hamburger-menu';
 
 class App extends React.Component {
@@ -86,9 +86,9 @@ updateWindowDimensions() {
 
 <span id="cursor"></span>
 <div class="links" data-aos-anchor="#name" data-aos='fade-down' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
-        <a onClick={()=> window.fullpage_api.moveTo(1)}>Intro</a>
-        <a onClick={()=> window.fullpage_api.moveTo(2)}>About</a>
-        <a onClick={()=> window.fullpage_api.moveTo(3)}>Portfolio</a>
+        <a onClick={()=> window.fullpage_api.moveTo(1)}><span class="strike activeStrike" id="strike0">Intro</span></a>
+        <a onClick={()=> window.fullpage_api.moveTo(2)}><span class="strike" id="strike1">About</span></a>
+        <a onClick={()=> window.fullpage_api.moveTo(3)}><span class="strike" id="strike2">Portfolio</span></a>
         <a onClick={() => this.setState({ ContactContainerClassList: "ContactContainer ContactContainerActive" })}>CONTACT</a>
 
     </div>
@@ -148,6 +148,7 @@ dragAndMove={true}
 loopBottom={true}
 navigation={true}
 navigationPosition= 'right'
+onLeave={(origin, destination, direction)=>{document.getElementById("strike" + destination.index).classList.add('activeStrike');document.getElementById("strike" + origin.index).classList.remove('activeStrike')}}
 render={({ state, fullpageApi }) => {
   return (
     <div>

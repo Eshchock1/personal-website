@@ -1,14 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import "../home.scss";
 import Icon from "../icon2.png";
-import linkedin from "../linkedin.png";
-import instagram from "../instagram.png";
-import github from "../github.png";
 import ParallaxMousemove from "react-parallax-mousemove";
-import HamburgerMenu from 'react-hamburger-menu';
-import { FaLinkedinIn,FaInstagram, FaGithub} from 'react-icons/fa';
+import {FaChevronDown} from 'react-icons/fa';
 import cursor from '../cursor'
-import {Link} from 'react-router-dom';
 
 const style = {
     layerStyle1: {
@@ -224,6 +219,9 @@ updateWindowDimensions() {
                     </div>
                 </ParallaxMousemove>
             </div>
+        </div>
+        <div id="scrollDownContainer" data-aos-anchor="#name" data-aos='zoom-out' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
+            <FaChevronDown/>
         </div>
         </div>
     );
