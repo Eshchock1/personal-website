@@ -125,8 +125,8 @@ updateWindowDimensions() {
                             xFactor: -0.04 * 0.8,
                             yFactor: 0.03* 0.8,
                             springSettings: {
-                                stiffness: 75,
-                                damping: 5,
+                                stiffness: 50,
+                                damping: 8,
                             },}}>
                         <div className="breh">
                             <h1>Eshwara</h1>
@@ -146,8 +146,8 @@ updateWindowDimensions() {
                                 xFactor: 0.06* 0.8,
                                 yFactor: -0.1* 0.8,
                                 springSettings: {
-                                    stiffness: 100,
-                                    damping: 5,
+                                    stiffness: 50,
+                                damping: 8,
                                 },}}>
                             <div className="ball3"></div>
                         </ParallaxMousemove.Layer>
@@ -159,8 +159,8 @@ updateWindowDimensions() {
                                 xFactor: 0.1* 0.8,
                                 yFactor: -0.13* 0.8,
                                 springSettings: {
-                                    stiffness: 75,
-                                    damping: 5,
+                                    stiffness: 50,
+                                damping: 8,
                                 },}}>
                             <div className="ball4"></div>
                         </ParallaxMousemove.Layer>
@@ -172,8 +172,8 @@ updateWindowDimensions() {
                                 xFactor: 0.1* 0.8,
                                 yFactor: -0.13* 0.8,
                                 springSettings: {
-                                    stiffness: 75,
-                                    damping: 5,
+                                    stiffness: 50,
+                                damping: 8,
                                 },}}>
                             <div className="ball1"></div>
                         </ParallaxMousemove.Layer>
@@ -189,8 +189,8 @@ updateWindowDimensions() {
                                 xFactor: -0.1* 0.8,
                                 yFactor: 0.1* 0.8,
                                 springSettings: {
-                                    stiffness: 75,
-                                    damping: 5,
+                                    stiffness: 50,
+                                damping: 8,
                                 },}}>
                             <div className="ball6"></div>
                         </ParallaxMousemove.Layer>
@@ -203,8 +203,8 @@ updateWindowDimensions() {
                                 xFactor: -0.16* 0.8,
                                 yFactor: 0.2* 0.8,
                                 springSettings: {
-                                    stiffness: 75,
-                                    damping: 5,
+                                    stiffness: 50,
+                                damping: 8,
                                 },}}>
                             <div className="ball2"></div>
                         </ParallaxMousemove.Layer>
@@ -216,8 +216,8 @@ updateWindowDimensions() {
                                 xFactor: -0.17* 0.8,
                                 yFactor: 0.17* 0.8,
                                 springSettings: {
-                                    stiffness: 75,
-                                    damping: 5,
+                                    stiffness: 50,
+                                    damping: 8,
                                 },}}>
                             <div className="ball5"></div>
                         </ParallaxMousemove.Layer>
