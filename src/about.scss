@@ -6,6 +6,9 @@
     40% {transform: rotate(0deg)}
   }
 
+  #about {
+      overflow: hidden;
+  }
 .animatedWave {
     display: inline-block;
     animation-iteration-count: infinite; 
@@ -137,9 +140,35 @@
 }
 
 .textContainer .content {
-    font-size:0.8em; 
+    font-size:0.75em; 
 }
 .emojiContainer .emoji {
-    margin-top: -8.5vh;
+    margin-top: -10vh;
 }
+}
+
+@media only screen and (max-height: 660px) {
+    .outerContainer {
+        top:3vh;
+    }
+    
+    .outerContainer .textContainer {
+        justify-content: flex-start;
+        margin-top:0;
+    }
+    
+    .textContainer .title {
+        font-size:1.5em; 
+    }
+    
+    .textContainer .subtitle {
+        font-size:0.8em;
+    }
+    
+    .textContainer .content {
+        font-size:0.7em; 
+    }
+    .emojiContainer .emoji {
+        margin-top: -8vh;
+    }
 }

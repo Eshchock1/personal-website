@@ -12,7 +12,7 @@ constructor(props) {
   render() {
   
   return (
-<div className="appContainer" id="work" style={{justifyContent:'flex-start'}}>
+<div className="appContainer" id="about" style={{justifyContent:'flex-start'}}>
     <div className="outerContainer">
       <div className="textContainer">
         <h1 className="title">HEY THERE<span className="noFont"><div className="animatedWave">👋</div>!</span><br/>I<span className="noFont">'</span>M ESHWARA<span className="noFont">.</span></h1>
