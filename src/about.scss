@@ -90,19 +90,19 @@
     }
     
     .textContainer .title {
-        font-size:3em; 
+        font-size:2.5em; 
         margin:0;
     }
     
     .textContainer .subtitle {
-        font-size:1.5em;
+        font-size:1.3em;
         width:85%;
         font-weight: 500;
         margin:0.5em 0;
     }
     
     .textContainer .content {
-        font-size:1.2em; 
+        font-size:0.8em; 
         width:85%; 
         margin-top:-0.3em; 
     }
@@ -114,7 +114,42 @@
 } 
 
 
-@media only screen and (max-width: 767px) { 
+@media only screen and (max-width: 768px) { 
+    
+    .outerContainer {
+        flex-direction:column;
+        position: absolute;
+        height:100vh;
+    }
+
+.outerContainer .textContainer {
+    justify-content: flex-start;
+    margin-top:15% !important;
+    flex: 0.4;
+}
+
+.textContainer .title {
+    font-size:2.2em; 
+}
+
+.textContainer .subtitle {
+    font-size:1.4em;
+}
+
+.textContainer .content {
+    font-size:0.95em; 
+}
+.emojiContainer {
+    flex:0.4;
+}
+.emojiContainer .emoji {
+    width:33vh;
+    height:33vh;
+    margin-top: -5vh !important;
+}
+}
+
+@media only screen and (max-width: 700px) { 
     
     .outerContainer {
         flex-direction:column;
@@ -149,7 +184,7 @@
 }
 }
 
-@media only screen and (max-height: 660px) {
+@media only screen and (max-width: 650px) { 
     
     .outerContainer .textContainer {
         justify-content: flex-start;

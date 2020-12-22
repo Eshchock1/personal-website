@@ -340,8 +340,8 @@ html, body {
 	font-weight: 700;
 	color:white;
 	text-decoration: none;
-	font-size: 5vw;
-	padding-top: 5vw;
+	font-size: 2em;
+	padding-top: 0;
 	display: block;
 	text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.425);
 	text-align:left;
@@ -521,7 +521,7 @@ html, body {
 
 .mobileSocials h2 a{
 	color:#fff;
-	font-size: 1.2em !important;
+	font-size: 1.6em !important;
 	margin-right: 1em;
 }
 
@@ -560,6 +560,7 @@ html, body {
 		display: none;
 	}
 	#scrollDownContainer {
+		bottom:10vh;
 		font-size: 2.5em;
 	}
   }
@@ -571,8 +572,8 @@ html, body {
 		right:6vw;
 	}
 	#scrollDownContainer {
-		bottom: 4vh;
-		font-size: 1.5em;
+		bottom: 8vh;
+		font-size: 2.8em;
 	}
 	.ball1 {
 		width:20vw;height:20vw;border-radius:20vw;		
