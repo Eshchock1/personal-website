@@ -8,20 +8,13 @@ import Tilt from 'react-parallax-tilt';
 export default class Portfolio extends React.Component {    
 
   componentDidMount() {
-    this.updateWindowDimensions();
+    if (window.innerWidth >= 1366) {
+      this.handleWorkClick(0);
+    }
   }
-  
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-  
-  updateWindowDimensions() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
-  }
-
 constructor(props) {
   super(props);
-  this.state = {width: 0, height: 0, activeWork:0, rotation:360, mobileWorkMenuClassList:"mobileWorkMenu", workClassList:'works', workContent:<div><h2>Revolutionary Dental Health</h2><p>Helped design and develop a revolutionary mobile dental health platform which would provide users with a better telemedicine experience with their oral care. Played an integral role in the front-end development of the application with secure React Native code, designed UI and UX with Figma, and communicated with teams of engineers, analysts, and management to provide a product of clarity and simplicity.</p><a href="">Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Mobile Engineer</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>React Native<br/>Figma<br/>Dialogflow</h6></div><div><h4>YEAR</h4><h6>2020</h6></div></div></div>,};
+  this.state = {activeWork:0, rotation:360, mobileWorkMenuClassList:"mobileWorkMenu", workClassList:'works', workContent:<div><h2>Revolutionary Dental Health</h2><p>Helped design and develop a revolutionary mobile dental health platform which would provide users with a better telemedicine experience with their oral care. Played an integral role in the front-end development of the application with secure React Native code, designed UI and UX with Figma, and communicated with teams of engineers, analysts, and management to provide a product of clarity and simplicity.</p><a href="">Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Mobile Engineer</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>React Native<br/>Figma<br/>Dialogflow</h6></div><div><h4>YEAR</h4><h6>2020</h6></div></div></div>,};
 }
 
 handleWorkClick(number){
@@ -38,7 +31,7 @@ handleWorkClick(number){
     ]
     document.getElementById("black-board").style.transform = 'rotateY(' + this.state.rotation + 'deg)';
     this.setState({rotation:this.state.rotation+360})
-    if (this.state.width < 1366) {
+    if (window.innerWidth < 1366) {
       this.setState({workContent:content[number]})
     }
     else {
