@@ -158,7 +158,7 @@ render={({ state, fullpageApi }) => {
         
         <Home/>
         </div>
-        <div className="section">
+        <div className="section aboutPage">
           <About/>
           </div>
     <div className="section">
