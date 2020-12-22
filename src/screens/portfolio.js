@@ -6,9 +6,22 @@ import Tilt from 'react-parallax-tilt';
 
 
 export default class Portfolio extends React.Component {    
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
 constructor(props) {
   super(props);
-  this.state = {activeWork:0, rotation:360, mobileWorkMenuClassList:"mobileWorkMenu", workClassList:'works', workContent:<div><h2>Revolutionary Dental Health</h2><p>Helped design and develop a revolutionary mobile dental health platform which would provide users with a better telemedicine experience with their oral care. Played an integral role in the front-end development of the application with secure React Native code, designed UI and UX with Figma, and communicated with teams of engineers, analysts, and management to provide a product of clarity and simplicity.</p><a href="">Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Mobile Engineer</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>React Native<br/>Figma<br/>Dialogflow</h6></div><div><h4>YEAR</h4><h6>2020</h6></div></div></div>,};
+  this.state = {width: 0, height: 0, activeWork:0, rotation:360, mobileWorkMenuClassList:"mobileWorkMenu", workClassList:'works', workContent:<div><h2>Revolutionary Dental Health</h2><p>Helped design and develop a revolutionary mobile dental health platform which would provide users with a better telemedicine experience with their oral care. Played an integral role in the front-end development of the application with secure React Native code, designed UI and UX with Figma, and communicated with teams of engineers, analysts, and management to provide a product of clarity and simplicity.</p><a href="">Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Mobile Engineer</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>React Native<br/>Figma<br/>Dialogflow</h6></div><div><h4>YEAR</h4><h6>2020</h6></div></div></div>,};
 }
 
 handleWorkClick(number){
@@ -35,7 +48,6 @@ handleWorkClick(number){
       const timer2 = setTimeout(() => {
       }, 2000);
       return()=> clearTimeout(timer1, timer2);
-
     }
       
 }
