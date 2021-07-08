@@ -75,9 +75,9 @@ updateWindowDimensions() {
     <h3>Contact me</h3>
     <h1><a href="mailto:eshchock1@gmail.com">eshchock<span className="noFont" style={{marginLeft:'-0.7vw', marginRight:'0.3vw'}}>1@</span>gmail<span className="noFont" style={{marginRight:'0.2vw'}}>.</span>com</a></h1>
     <div className="contactSocials">
-    <h2 id="social1" onMouseEnter={()=>this.setState({currentSocial: "Linkedin"})}><a href="https://www.linkedin.com/in/eshwar-chockalingam-b07bb11b2/"><FaLinkedinIn/></a></h2>
+    <h2 id="social1" onMouseEnter={()=>this.setState({currentSocial: "Linkedin"})}><a href="https://www.linkedin.com/in/eshwara-chock-b07bb11b2/"><FaLinkedinIn/></a></h2>
     <h2 id="social2" onMouseEnter={()=>this.setState({currentSocial: "Github"})}> <a href="http://github.com/Eshchock1"><FaGithub/></a></h2>
-                        <h2 id="social3" onMouseEnter={()=>this.setState({currentSocial: "Instagram"})}><a href="https://www.instagram.com/eshwar_chockalingam/"><FaInstagram/></a></h2>
+                        <h2 id="social3" onMouseEnter={()=>this.setState({currentSocial: "Instagram"})}><a href="https://www.instagram.com/eshwara_chock/"><FaInstagram/></a></h2>
                         <div className="break"></div>
   <h3 id="currentSocial">{this.state.currentSocial}</h3>
 
@@ -122,9 +122,9 @@ updateWindowDimensions() {
  </li>
  <li>
  <div class="mobileSocials">
- <h2><a href="https://www.linkedin.com/in/eshwar-chockalingam-b07bb11b2/"><FaLinkedinIn/></a></h2>
+ <h2><a href="https://www.linkedin.com/in/eshwara-chock-b07bb11b2/"><FaLinkedinIn/></a></h2>
     <h2> <a href="http://github.com/Eshchock1"><FaGithub/></a></h2>
-                        <h2><a href="https://www.instagram.com/eshwar_chockalingam/"><FaInstagram/></a></h2>
+                        <h2><a href="https://www.instagram.com/eshwara_chock/"><FaInstagram/></a></h2>
  </div>
  </li>
  </ul>
@@ -133,13 +133,13 @@ updateWindowDimensions() {
     <div class="socials" data-aos-anchor="#name" data-aos='fade-right' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
                 <ul>
                 <li>
-                        <a href="https://www.linkedin.com/in/eshwar-chockalingam-b07bb11b2/"><FaLinkedinIn /></a>
+                        <a href="https://www.linkedin.com/in/eshwara-chock-b07bb11b2/"><FaLinkedinIn /></a>
                     </li>
                     <li>
                         <a href="http://github.com/Eshchock1"><FaGithub /></a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/eshwar_chockalingam/"><FaInstagram /></a>
+                        <a href="https://www.instagram.com/eshwara_chock/"><FaInstagram /></a>
                     </li>
                 </ul>
             </div>
