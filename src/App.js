@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
-import Home from './screens/home';
-import About from './screens/about';
+import './styles/App.css';
+import Home from './pages/home';
+import About from './pages/about';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Portfolio from './screens/portfolio';
-import "./home.scss";
+import Portfolio from './pages/portfolio';
+import "./styles/home.scss";
 import ReactFullpage from '@fullpage/react-fullpage';
 import { FaLinkedinIn,FaInstagram, FaGithub} from 'react-icons/fa';
 import HamburgerMenu from 'react-hamburger-menu';

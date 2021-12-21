@@ -1,9 +1,7 @@
 import React from "react";
-import "../home.scss";
-import Icon from "../icon2.png";
+import "../styles/home.scss";
 import ParallaxMousemove from "react-parallax-mousemove";
 import {FaChevronDown} from 'react-icons/fa';
-import cursor from '../cursor'
 
 const style = {
     layerStyle1: {
@@ -79,21 +77,14 @@ export default class Home extends React.Component {
 }
 constructor(props) {
   super(props);
-  this.state = { width: 0, height: 0, loading:'loading',website:'websiteContainer'};
+  this.state = { width: 0, height: 0, website:'websiteContainer'};
   this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 }
 
 componentDidMount() {
   this.updateWindowDimensions();
   window.addEventListener('resize', this.updateWindowDimensions);
-const timer1 = setTimeout(() => {
-  this.setState({loading: 'loading loadingDone1'})
   this.setState({website: 'websiteContainer websiteContainerActive'})
-}, 0);
-const timer2 = setTimeout(() => {
-    this.setState({loading: 'loading loadingDone1 loadingDone2'})
-  }, 0);
-  return()=> clearTimeout(timer1, timer2);
 }
 
 componentWillUnmount() {
@@ -108,10 +99,7 @@ updateWindowDimensions() {
   return (
       
     <div className="appContainer">
-          {/* <span id="cursor"></span> */}
-  <div className={this.state.loading}  data-aos='zoom-out' data-aos-easing="ease-out-cubic" data-aos-duration="500"><img src={Icon}/></div>
     <div className={this.state.website}>
-
             <div className="container" id="name" data-aos='zoom-out' data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
                 <ParallaxMousemove>
                     <ParallaxMousemove.Layer

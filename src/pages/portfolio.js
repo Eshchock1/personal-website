@@ -1,6 +1,6 @@
 import React from "react";
-import "../home.scss";
-import "../work.scss";
+import "../styles/home.scss";
+import "../styles/work.scss";
 import {FaArrowRight,FaChevronLeft} from 'react-icons/fa';
 import Tilt from 'react-parallax-tilt';
 
@@ -14,7 +14,7 @@ export default class Portfolio extends React.Component {
   }
 constructor(props) {
   super(props);
-  this.state = {activeWork:0, rotation:360, mobileWorkMenuClassList:"mobileWorkMenu", workClassList:'works', workContent:<div><div><h2>Pioneering BitClout Exchange</h2><p>Led front end development for BitSwap, the world's first BitClout exchange valued at $10M. Collaborated with designers and backend developers, to build, test, and deploy BitSwap's centralized and decentralized exchange web applications. Designed and developed dynamic applications using Figma and React to provide users with the best experience to buy and sell BitClout with ease.</p><a href="https://bitswap.network/">Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Front End Engineer</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>ReactJS<br/>Figma<br/>Chakra UI</h6></div><div><h4>YEAR</h4><h6>2021 - Present</h6></div></div></div></div>,};
+  this.state = {activeWork:0, rotation:360, mobileWorkMenuClassList:"mobileWorkMenu", workClassList:'works', workContent:<div><div><h2>Pioneering BitClout Exchange</h2><p>Led front end development for BitSwap, the world's first BitClout exchange valued at $10M. Collaborated with designers and backend developers, to build, test, and deploy BitSwap's centralized and decentralized exchange web applications. Designed and developed dynamic applications using Figma and React to provide users with the best experience to buy and sell BitClout with ease.</p><a href="https://bitswap.network/">Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Front End Engineer</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>ReactJS<br/>Figma<br/>Chakra UI</h6></div><div><h4>YEAR</h4><h6>2021</h6></div></div></div></div>};
 }
 
 handleWorkClick(number){
@@ -22,7 +22,7 @@ handleWorkClick(number){
     this.setState({activeWork:number, workClassList:"works worksActives", mobileWorkMenuClassList:'mobileWorkMenu mobileWorkMenuActive'})
     document.getElementById("work" + number).classList.add('currentWorkActive');
     const content = [
-        <div><div><h2>Pioneering BitClout Exchange</h2><p>Led front end development for BitSwap, the world's first BitClout exchange valued at $10M. Collaborated with designers and backend developers, to build, test, and deploy BitSwap's centralized and decentralized exchange web applications. Designed and developed dynamic applications using Figma and React to provide users with the best experience to buy and sell BitClout with ease.</p><a href="https://bitswap.network/">Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Front End Engineer</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>ReactJS<br/>Figma<br/>Chakra UI</h6></div><div><h4>YEAR</h4><h6>2021 - Present</h6></div></div></div></div>,
+        <div><div><h2>Pioneering BitClout Exchange</h2><p>Led front end development for BitSwap, the world's first BitClout exchange valued at $10M. Collaborated with designers and backend developers, to build, test, and deploy BitSwap's centralized and decentralized exchange web applications. Designed and developed dynamic applications using Figma and React to provide users with the best experience to buy and sell BitClout with ease.</p><a href="https://bitswap.network/">Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Front End Engineer</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>ReactJS<br/>Figma<br/>Chakra UI</h6></div><div><h4>YEAR</h4><h6>2021</h6></div></div></div></div>,
         <div><div><h2>Revolutionary Dental Health</h2><p>Helped design and develop a revolutionary mobile dental health platform which would provide users with a better telemedicine experience for  their oral care. Played an integral role in the front-end development of the application with secure React Native code, designed UI and UX with Figma, and communicated with teams of engineers, analysts, and management to provide a product of clarity and simplicity.</p><a href="https://www.snapsmile.io/">Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Mobile Engineer</h6></div><div><h4>SKILLS</h4><h6>UX/UI<br/>React Native<br/>Figma<br/>Dialogflow</h6></div><div><h4>YEAR</h4><h6>2020 - 2021</h6></div></div></div></div>,
         <div><div><h2>Learning Just Got Easier</h2><p>Co-founded and led the development of a modernized educational platform to provide students with a streamlined learning experience. I built and managed the development process of a suite of multi-functional tools including forum, group, and note sharing platforms. Led and collaborated with multidisciplinary teams to provide a unique educational platform with an outreach of over 150 students.</p><a href="https://quento.ca/">Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Co-Founder</h6></div><div><h4>SKILLS</h4><h6>Vue.js<br/>Firebase<br/>CSS<br/>UI/UX</h6></div><div><h4>YEAR</h4><h6>2020 - 2021</h6></div></div></div></div>,
         <div><div><h2>Geared For Success</h2><p>I played an integral role as a lead programmer on the VEX Robotics team 2381Y through the development of software modules for autonomous tasks implementing RobotC, C++, and PROS. Collaborated in the construction of the robot and the implementation of a streamlined Github workspace, managing to qualify for the 2019 - 2020 World Championships. I also created the organization’s website with eye-catching designs, animations, and useful functionality.</p><a href="https://2381.ca/">Launch Project &nbsp;<FaArrowRight/></a><div className="stats"><div><h4>ROLE</h4><h6>Software Engineer</h6></div><div><h4>SKILLS</h4><h6>C++<br/>PROS<br/>Web Development<br/>Visual Design</h6></div><div><h4>YEAR</h4><h6>2019 - 2021</h6></div></div></div></div>,
@@ -48,7 +48,6 @@ handleWorkClick(number){
   
   return (
     <div className="appContainer" id="work" style={{justifyContent:'flex-start'}}>
-    {/* <span id="cursor"></span> */}
     <div className={this.state.mobileWorkMenuClassList}>
 <div className="mobileWorkMenuInner" onClick={()=> this.setState({mobileWorkMenuClassList:'mobileWorkMenu'})}>
 <FaChevronLeft />

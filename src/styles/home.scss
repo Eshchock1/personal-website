@@ -1,7 +1,7 @@
 
  @font-face {
 	font-family: 'edition';
-	src: url('Edition-BxnV.ttf'); /* IE9 Compat Modes */
+	src: url('../assets/Edition-BxnV.ttf'); /* IE9 Compat Modes */
 } 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 // MonumentExtended-Ultrabold.otf
@@ -127,36 +127,36 @@ html, body {
 
 .ball1 {
     background-position:center;
-        background-size: cover;background-image: url('ball.png');width:15.6vw;height:15.6vw;border-radius:15.6vw;overflow: hidden;
+        background-size: cover;background-image: url('../assets/ball.png');width:15.6vw;height:15.6vw;border-radius:15.6vw;overflow: hidden;
         
 }
 .ball2 {
     width:10.4vw;height:10.4vw;border-radius:15.6vw;background-position:center;
-        background-size: cover;background-image: url('ball.png');overflow: hidden;
+        background-size: cover;background-image: url('../assets/ball.png');overflow: hidden;
         
 
 }
 
 .ball3 {
     background-position:center;
-        background-size: cover;background-image: url('ball.png');width:26vw;height:26vw;border-radius:26vw;
+        background-size: cover;background-image: url('../assets/ball.png');width:26vw;height:26vw;border-radius:26vw;
         
 }
 
 .ball4 {
     background-position:center;
-    background-size: cover;background-image: url('ball.png');width:14vw;height:14vw;border-radius:15.6vw;overflow: hidden;
+    background-size: cover;background-image: url('../assets/ball.png');width:14vw;height:14vw;border-radius:15.6vw;overflow: hidden;
     
 }
 
 .ball5 {
     background-position:center;
-        background-size: cover;background-image: url('ball.png');width:5.2vw;height:5.2vw;border-radius:15.6vw;overflow: hidden;
+        background-size: cover;background-image: url('../assets/ball.png');width:5.2vw;height:5.2vw;border-radius:15.6vw;overflow: hidden;
         
 }
 .ball6 {
     background-position:center;
-        background-size: cover;background-image: url('ball.png');width:5.2vw;height:5.2vw;border-radius:15.6vw;overflow: hidden;
+        background-size: cover;background-image: url('../assets/ball.png');width:5.2vw;height:5.2vw;border-radius:15.6vw;overflow: hidden;
         
 }
 
