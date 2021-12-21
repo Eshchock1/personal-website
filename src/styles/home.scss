@@ -288,7 +288,10 @@ html, body {
 	z-index: 20;
 }
 
-.links a {
+.links button {
+	background:none;
+	border: none;
+	cursor: pointer;
 	font-family: 'edition', sans-serif;
 	font-weight: 700;
 	color:white;
@@ -335,7 +338,10 @@ html, body {
 	margin-bottom: 1.3vw;
 }
 
-.menu ul li a{
+.menu ul li button, .menu ul li a{
+	background: none;
+	border: none;
+	cursor: pointer;
 	font-family: 'edition', sans-serif;
 	font-weight: 700;
 	color:white;

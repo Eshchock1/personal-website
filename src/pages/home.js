@@ -64,7 +64,7 @@ export default class Home extends React.Component {
     this.setState({
         open: !this.state.open
     });
-    if (this.state.menuClassList == "menu") {
+    if (this.state.menuClassList === "menu") {
       this.setState({
         menuClassList: "menu menuActive"
     });

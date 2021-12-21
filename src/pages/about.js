@@ -20,7 +20,7 @@ export default class About extends React.Component {
             <h1 className="title">
               HEY THERE
               <span className="noFont">
-                <div className="animatedWave">👋</div>!
+                <div className="animatedWave"><span role="img" aria-label="wave">👋</span></div>!
               </span>
               <br />I<span className="noFont">'</span>M ESHWARA
               <span className="noFont">.</span>
@@ -34,6 +34,7 @@ export default class About extends React.Component {
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
                 href="https://www.useunify.app/"
+                rel="noopener noreferrer"
               >
                 useunify.app
               </a>{" "}
@@ -42,6 +43,7 @@ export default class About extends React.Component {
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
                 href="https://monument.app/"
+                rel="noopener noreferrer"
               >
                 Monument.app
               </a>{" "}
@@ -53,6 +55,7 @@ export default class About extends React.Component {
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
                 href="https://bitswap.network/"
+                rel="noopener noreferrer"
               >
                 Bitswap
               </a>
@@ -61,6 +64,7 @@ export default class About extends React.Component {
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
                 href="https://www.snapsmile.ai/"
+                rel="noopener noreferrer"
               >
                 SnapSmile
               </a>
@@ -69,6 +73,7 @@ export default class About extends React.Component {
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
                 href="https://digitera.agency/"
+                rel="noopener noreferrer"
               >
                 Digitera.Interactive
               </a>
@@ -79,14 +84,15 @@ export default class About extends React.Component {
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
                 href="http://github.com/Eshchock1"
+                rel="noopener noreferrer"
               >
                 Github
               </a>{" "}
               or{" "}
               <a
-                target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
                 href="mailto:eshchock1@gmail.com"
+                rel="noopener noreferrer"
               >
                 shoot me a message
               </a>
@@ -109,7 +115,7 @@ export default class About extends React.Component {
                   },
                 }}
               >
-                <img className="emoji" src={require("../assets/emoji.png")} />
+                <img alt="my animoji" className="emoji" src={require("../assets/emoji.png")} />
               </ParallaxMousemove.Layer>
             </ParallaxMousemove>
           </div>
