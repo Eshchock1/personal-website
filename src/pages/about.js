@@ -26,10 +26,18 @@ export default class About extends React.Component {
               <span className="noFont">.</span>
             </h1>
             <h3 className="subtitle">
-              An 18 year old developer from Ottawa, Canada.
+              A 19 year old developer from Ottawa, Canada.
             </h3>
             <p className="content">
-              I’m currently building{" "}
+             I’m currently working as a Software Developer at{" "}
+             <a
+                target="_blank"
+                style={{ color: "white", fontWeight: 500 }}
+                href="https://www.rossvideo.com/"
+                rel="noopener noreferrer"
+              >
+                Ross Video
+              </a>{" "}and building{" "}
               <a
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
@@ -38,7 +46,10 @@ export default class About extends React.Component {
               >
                 useunify.app
               </a>{" "}
-              and{" "}
+              while pursuing a degree in computer science at the University of
+              Toronto. I am always exploring enriching opportunities with
+              pioneering technology I can implement to change the world. In the
+              past, I’ve worked with{" "}
               <a
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
@@ -47,10 +58,6 @@ export default class About extends React.Component {
               >
                 Monument.app
               </a>{" "}
-              while pursuing a degree in computer science at the University of
-              Toronto. I am always exploring enriching opportunities with
-              pioneering technology I can implement to change the world. In the
-              past, I’ve worked with{" "}
               <a
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}

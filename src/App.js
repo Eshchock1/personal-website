@@ -133,7 +133,7 @@ class App extends React.Component {
                   this.setState({ currentSocial: "Linkedin" })
                 }
               >
-                <a href="https://www.linkedin.com/in/eshwara-chock-b07bb11b2/">
+                <a href="https://www.linkedin.com/in/eshwara-chock/">
                   <FaLinkedinIn />
                 </a>
               </h2>
@@ -287,7 +287,7 @@ class App extends React.Component {
             <li>
               <div className="mobileSocials">
                 <h2>
-                  <a href="https://www.linkedin.com/in/eshwara-chock-b07bb11b2/">
+                  <a href="https://www.linkedin.com/in/eshwara-chock/">
                     <FaLinkedinIn />
                   </a>
                 </h2>
@@ -316,7 +316,7 @@ class App extends React.Component {
         >
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/eshwara-chock-b07bb11b2/">
+              <a href="https://www.linkedin.com/in/eshwara-chock/">
                 <FaLinkedinIn />
               </a>
             </li>
@@ -335,10 +335,10 @@ class App extends React.Component {
 
         <ReactFullpage
           scrollingSpeed={1000}
-          dragAndMove={true}
-          loopBottom={true}
-          navigation={true}
-          navigationPosition="right"
+          dragAndMove
+          loopBottom
+          navigation={false}
+          // navigationPosition="right"
           onLeave={(origin, destination) => {
             document
               .getElementById("strike" + destination.index)
