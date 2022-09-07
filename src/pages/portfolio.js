@@ -57,9 +57,6 @@ handleWorkClick(number){
 {this.state.workContent}
 </div>
 </div>
-
-    
-    
     <div className="flexContainer1">
     <div className={this.state.workClassList} style={{textAlign:'left'}}>
         <h1 id="work0" onClick={()=>this.handleWorkClick(0)}>Unify</h1>
@@ -72,7 +69,7 @@ handleWorkClick(number){
     </div>
     <div className="flexContainer2">
     <div className="description" style={{textAlign:'left',}}>
-        <Tilt className="Tilt" glareEnable={true} glareColor="rgba(61, 61, 61,0.4)" scale={1.05} perspective={2000} tiltMaxAngleX={10} tiltMaxAngleY={10} transitionSpeed={2000} trackOnWindow={true}>
+        <Tilt className="Tilt" glareEnable={true} glareColor="rgba(225, 225, 225, 0.2)" scale={1.05} perspective={2000} tiltMaxAngleX={7} tiltMaxAngleY={7} transitionSpeed={2000} trackOnWindow={true}>
         <div id="black-board">
             <div id="textContainer">
             {this.state.workContent}

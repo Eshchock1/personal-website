@@ -103,7 +103,7 @@ class App extends React.Component {
                     : 0.0015 * this.state.width
                 }
                 rotate={0}
-                color="black"
+                color="white"
                 borderRadius={5}
                 animationDuration={0.5}
               />
@@ -234,7 +234,7 @@ class App extends React.Component {
                 : 0
             }
             rotate={0}
-            color="white"
+            color="#607878"
             borderRadius={5}
             animationDuration={0.5}
           />
@@ -282,7 +282,7 @@ class App extends React.Component {
               </button>{" "}
             </li>
             <li>
-              <a href="mailto:eshchock1@gmail.com">CONTACT</a>
+              <a href="mailto:eshchock1@gmail.com" className="mobileContact">CONTACT</a>
             </li>
             <li>
               <div className="mobileSocials">

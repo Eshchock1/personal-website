@@ -23,7 +23,7 @@
 	left: -0.5vw;
 	width: 0;
 	height: 0.3vw;
-	background: white;
+	background: var(--text);
 	transition: 0.5s ease-in-out;
   }
 
@@ -34,7 +34,7 @@
 #scrollDownContainer {
 	position: absolute;
 	bottom: 5vh;
-	color:white;
+	color:#607878;
 	font-size: 2vw;
 	animation: bounce 2s ease-in-out 3s infinite;
 }
@@ -72,12 +72,9 @@ html, body {
   a {
     cursor: pointer;
 }
-.fp-right span{
-	background-color: #363535 !important;
-}
 
 .loading {
-	// background-color:#e20025;
+	// background-color:red;
 	height: 100vh;
 	width: 100vw;
 	padding: 0;
@@ -98,7 +95,7 @@ html, body {
 	display: none;
   }
   .loading img{
-	color: white;
+	color: var(--text);
 	width: 20vw;
 	height: 20vw;
   }
@@ -127,36 +124,36 @@ html, body {
 
 .ball1 {
     background-position:center;
-        background-size: cover;background-image: url('../assets/ball.png');width:15.6vw;height:15.6vw;border-radius:15.6vw;overflow: hidden;
+        background-size: cover;background-image: url('../assets/item1.png');width:15.6vw;height:15.6vw;
         
 }
 .ball2 {
-    width:10.4vw;height:10.4vw;border-radius:15.6vw;background-position:center;
-        background-size: cover;background-image: url('../assets/ball.png');overflow: hidden;
+    width:10.4vw;height:10.4vw;background-position:center;
+        background-size: cover;background-image: url('../assets/item2.png');
         
 
 }
 
 .ball3 {
     background-position:center;
-        background-size: cover;background-image: url('../assets/ball.png');width:26vw;height:26vw;border-radius:26vw;
+        background-size: cover;background-image: url('../assets/item3.png');width:26vw;height:26vw;
         
 }
 
 .ball4 {
     background-position:center;
-    background-size: cover;background-image: url('../assets/ball.png');width:14vw;height:14vw;border-radius:15.6vw;overflow: hidden;
+    background-size: cover;background-image: url('../assets/item4.png');width:14vw;height:14vw;
     
 }
 
 .ball5 {
     background-position:center;
-        background-size: cover;background-image: url('../assets/ball.png');width:5.2vw;height:5.2vw;border-radius:15.6vw;overflow: hidden;
+        background-size: cover;background-image: url('../assets/item5.png');width:5.2vw;height:5.2vw;
         
 }
 .ball6 {
     background-position:center;
-        background-size: cover;background-image: url('../assets/ball.png');width:5.2vw;height:5.2vw;border-radius:15.6vw;overflow: hidden;
+        background-size: cover;background-image: url('../assets/item4.png');width:5.2vw;height:5.2vw;
         
 }
 
@@ -211,7 +208,7 @@ html, body {
 }
 
 .container h1 {
-	color: mix(#fff, #fff, 85%);
+	color: var(--name-text);
 	line-height: 0;
 	font-size: calc(1em + 11vw) ;  
     font-weight: 800;
@@ -220,20 +217,20 @@ html, body {
 	font-family: 'edition', sans-serif;
 	letter-spacing: -0.02em;
 	text-shadow: 
-	0.035em 0.035em 0 mix(#3f3f3f, #e20025, 32%),
-	0.03em 0.03em 0 mix(#3f3f3f, #e20025, 30%),
-	0.025em 0.025em 0 mix(#3f3f3f, #e20025, 28%),
-	0.02em 0.02em 0 mix(#3f3f3f, #e20025, 26%), 
-	0.015em 0.015em mix(#3f3f3f, #e20025, 24%), 
-	0.01em 0.01em 0 mix(#3f3f3f, #e20025, 22%), 
-	0.005em 0.005em 0 mix(#3f3f3f, #e20025, 20%),
-	-0.0075em 0.0075em 0 mix(#3f3f3f, #e20025, 54%);
+	0.035em 0.035em 0 mix(#3f3f3f, #354747, 32%),
+	0.03em 0.03em 0 mix(#3f3f3f, #354747, 30%),
+	0.025em 0.025em 0 mix(#3f3f3f, #354747, 28%),
+	0.02em 0.02em 0 mix(#3f3f3f, #354747, 26%), 
+	0.015em 0.015em mix(#3f3f3f, #354747, 24%), 
+	0.01em 0.01em 0 mix(#3f3f3f, #354747, 22%), 
+	0.005em 0.005em 0 mix(#3f3f3f, #354747, 20%),
+	-0.0075em 0.0075em 0 mix(#3f3f3f, #354747, 54%);
 
 
 }
 
 .container h2 {
-	color: mix(#fff, #fff, 85%);
+	color: var(--name-text);
 	line-height: 2vw;
 	margin-left: 0.5vw;
 	font-size: calc(1em + 5vw) ;  
@@ -242,14 +239,14 @@ html, body {
     align-self: center;
 	font-family: 'edition', sans-serif;
 	text-shadow: 
-	0.09em 0.09em 0 mix(#3f3f3f, #e20025, 32%),
-	0.08em 0.08em 0 mix(#3f3f3f, #e20025, 30%),
-	0.07em 0.07em 0 mix(#3f3f3f, #e20025, 28%),
-	0.06em 0.06em 0 mix(#3f3f3f, #e20025, 26%), 
-	0.05em 0.05em mix(#3f3f3f, #e20025, 24%), 
-	0.04em 0.04em 0 mix(#3f3f3f, #e20025, 22%), 
-	0.03em 0.03em 0 mix(#3f3f3f, #e20025, 20%),
-	-0.0175em 0.0175em 0 mix(#3f3f3f, #e20025, 54%);
+	0.06em 0.06em 0 mix(#3f3f3f, #354747, 32%),
+	0.055em 0.055em 0 mix(#3f3f3f, #354747, 30%),
+	0.05em 0.05em 0 mix(#3f3f3f, #354747, 28%),
+	0.045em 0.045em 0 mix(#3f3f3f, #354747, 26%), 
+	0.04em 0.04em mix(#3f3f3f, #354747, 24%), 
+	0.035em 0.035em 0 mix(#3f3f3f, #354747, 22%), 
+	0.03em 0.03em 0 mix(#3f3f3f, #354747, 20%),
+	-0.0175em 0.0175em 0 mix(#3f3f3f, #354747, 54%);
 
 
 }
@@ -272,7 +269,7 @@ html, body {
 }
 
 .socials a {
-	color: white;
+	color: var(--text);
 	font-size: 2vw;
 }
 
@@ -294,7 +291,7 @@ html, body {
 	cursor: pointer;
 	font-family: 'edition', sans-serif;
 	font-weight: 700;
-	color:white;
+	color:var(--text);
 	margin:0.3vw 0;
 	text-decoration: none;
 	font-size: 1.45vw;
@@ -316,7 +313,7 @@ html, body {
 	z-index: 25;
 	width: 0vw;
 	height: 100vh;
-	background-color: #313131;
+	background-color: var(--blackboard);
 	top:0;
 	right: 0;
 	display: none;
@@ -338,19 +335,27 @@ html, body {
 	margin-bottom: 1.3vw;
 }
 
-.menu ul li button, .menu ul li a{
+.menu ul li button, .menu ul li a {
 	background: none;
 	border: none;
 	cursor: pointer;
 	font-family: 'edition', sans-serif;
 	font-weight: 700;
-	color:white;
+	color:var(--blackboard-text);
 	text-decoration: none;
-	font-size: 2em;
+	font-size: 1.7em;
 	padding-top: 0;
 	display: block;
-	text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.425);
 	text-align:left;
+	transition: 0.2s ease-out;
+}
+
+.menu ul li button:hover, .menu ul li a:hover {
+	color:var(--link) !important;
+}
+
+.mobileContact {
+	margin-left: 0.13em;
 }
 
 .appContainer{
@@ -367,7 +372,7 @@ html, body {
 	position: fixed;
 	width: calc(100vw - 4vw);
 	margin:0;
-	background-color: white;
+	background-color: var(--name-text);
 	z-index: 100;
 	overflow: hidden;
 	display: flex;
@@ -403,7 +408,7 @@ html, body {
 }
 
 .ContactContainer .diagonalBackground {
-	background-color: #f7f7f7;
+	background-color: var(--text);
 	width:200vw;
 	height: 100vh;
 	position: absolute;
@@ -416,7 +421,7 @@ html, body {
 .ContactContainer h3{
 	font-family: 'edition', sans-serif;
 	font-weight: 500;
-	color:black;
+	color:var(--blackboard-text);
 	font-size: 1.1vw;
 	line-height: 0;
 	z-index: 2;
@@ -426,7 +431,7 @@ html, body {
 .ContactContainer h1{
 	font-family: 'edition', sans-serif;
 	font-weight: 600;
-	color:black;
+	color:var(--blackboard-text);
 	font-size: 5vw;
 	line-height: 5vw;
 	letter-spacing: -0.25vw;
@@ -448,7 +453,7 @@ html, body {
 	height: 0.2vw;
 	bottom: 0;
 	left: 0;
-	background-color: black;
+	background-color: var(--blackboard-text);
 	visibility: hidden;
 	transform: scaleX(0);
 	transition: all 0.3s ease-in-out 0s;
@@ -457,11 +462,11 @@ html, body {
   .ContactContainer h1 :hover::before {
 	visibility: visible;
 	transform: scaleX(1);
-	background-color: mix(#3f3f3f, #e20025, 26%);
+	background-color: var(--link);
   }
 
 .ContactContainer h1:hover{
-	color:mix(#3f3f3f, #e20025, 26%);
+	color: var(--link);
 }
 
 .noFont {
@@ -490,7 +495,7 @@ html, body {
 
 .ContactContainer .contactSocials h2{
 	cursor: pointer;
-	color:black;
+	color:var(--blackboard-text);
 	font-size: 2vw;
 	margin:0 0.5vw;
 	transition: 0.2s ease-in-out;
@@ -502,10 +507,11 @@ html, body {
 
 
 .ContactContainer .contactSocials h2:hover{
-	color:mix(#3f3f3f, #e20025, 26%);
+	color: var(--link);
 }
 .ContactContainer .contactSocials h2:hover ~ #currentSocial{
 	opacity: 1;
+	color: var(--link);
 }
 
 #currentSocial {
@@ -526,7 +532,7 @@ html, body {
 }
 
 .mobileSocials h2 a{
-	color:#fff;
+	color:var(--blackboard-text);
 	font-size: 1.6em !important;
 	margin-right: 1em;
 }
@@ -609,8 +615,8 @@ html, body {
 		margin-top: 8vh;
 		margin-left: 5vw;
 	}
-	.menu ul li a{
-		padding-top: 3vw;
+	.menu ul li {
+		margin-bottom: 2.5vw;
 	}
   }
 

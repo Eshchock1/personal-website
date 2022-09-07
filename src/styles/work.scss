@@ -4,7 +4,8 @@
 } 
 
 .currentWorkActive {
-	color:#fff !important;
+	color:var(--text) !important;
+	opacity: 1 !important;
 }
 
 .appContainer {
@@ -30,7 +31,7 @@
 
 
 .works h1 {
-	font-size: calc(3.2vw);
+	font-size: 3.2em;
     font-weight: 800;
     justify-self: center;
 	align-self: center;
@@ -38,22 +39,21 @@
 	font-family: 'edition', sans-serif;
 	letter-spacing: -0.02em;
 	transition: 0.3s ease-in-out;
-	color: mix(#fff, #fff, 85%);
+	color: var(--text);
 }
 
 .worksActives h1{
-	color: rgba(255, 255, 255, 0.5);
+	opacity: 0.5;
 }
 
 
 .works:hover h1{
-	color: rgba(255, 255, 255, 0.5);
+	opacity: 0.5;
 }
 
-
-
 .works h1:hover{
-	color:#fff;
+	color:var(--text);
+	opacity: 1;
 }
 
 .description {
@@ -66,26 +66,15 @@
 }
 
 .description #black-board {
-	background-color: #292929;
+	background-color: var(--blackboard);
 	border-radius: 0.5vw;
-	box-shadow: 0.1vw 0.1vw 0 0.2vw #141414, 
-	0.2vw 0.2vw 0 0.2vw #141414, 
-	0.3vw 0.3vw 0 0.2vw #141414, 
-	0.4vw 0.4vw 0 0.2vw #141414, 
-	0.5vw 0.5vw 0 0.2vw #141414,
-	0.6vw 0.6vw 0 0.2vw #141414,
-	0.7vw 0.7vw 0 0.2vw #141414,
-	0.8vw 0.8vw 0 0.2vw #141414,
-	0.9vw 0.9vw 0 0.2vw #141414,
-	0.10vw 0.10vw 0 0.2vw #141414,
-	0.11vw 0.11vw 0 0.2vw #141414,
-	0.12vw 0.12vw 0 0.2vw #141414,
-	0.13vw 0.13vw 0 0.2vw #141414,
-	0.14vw 0.14vw 0 0.2vw #141414,
-	0.15vw 0.15vw 0 0.2vw #141414,
-	0.16vw 0.16vw 0 0.2vw #141414,
-	0.17vw 0.17vw 0 0.2vw #141414,
-	0.18vw 0.18vw 0 0.2vw #141414;
+	box-shadow: 0.1vw 0.1vw 0 0.2vw var(--blackboard-shadow), 
+	0.2vw 0.2vw 0 0.2vw var(--blackboard-shadow), 
+	0.3vw 0.3vw 0 0.2vw var(--blackboard-shadow), 
+	0.4vw 0.4vw 0 0.2vw var(--blackboard-shadow), 
+	0.5vw 0.5vw 0 0.2vw var(--blackboard-shadow),
+	0.6vw 0.6vw 0 0.2vw var(--blackboard-shadow),
+	0.7vw 0.7vw 0 0.2vw var(--blackboard-shadow);
 	padding:0vw 3vw;
 	display: flex;
 	align-items: center;
@@ -95,6 +84,7 @@
 	// transition: 2s cubic-bezier(0.77, 0, 0.175, 1);
 	transform-style: preserve-3d !important;
 	transform:rotateY(0);
+	width: 80%;
 }
 
 .description #black-board #textContainer {
@@ -103,24 +93,24 @@
 
 
 .description h2 {
-	font-size: 2vw;
+	font-size: 2em;
 	padding-top: 1vw;
-	color: white; 
+	color: var(--blackboard-text); 
 	font-family: 'edition', sans-serif;
 }
 
 .description p {
-	font-size: 1vw;
-	color: white; 
+	font-size: 1em;
+	color: var(--blackboard-text); 
 	font-family: 'poppins', sans-serif;
 }
 
 .description a {
 	text-decoration: none;
-	font-size: 0.9vw;
-	color: white; 
+	font-size: 0.9em;
+	color: var(--link); 
 	font-family: 'poppins', sans-serif;
-	border:0.12vw solid white;
+	border:0.2em solid var(--link);
 	padding: 0.4vw 0.7vw;
 	display: flex;
 	width:fit-content;
@@ -138,31 +128,27 @@
 }
 
 .description .stats h4{
-	font-size: 1vw;
-	color: white; 
+	font-size: 1em;
+	color: var(--blackboard-text); 
 	font-family: 'edition', sans-serif;
 	line-height: 0;
 }
 
 .description .stats h6{
-	font-size: 0.9vw;
-	color: white; 
+	font-size: 0.9em;
+	color: var(--blackboard-text); 
 	font-family: 'poppins', sans-serif;
 	font-weight: 300;
 	margin-top: 0;
 	line-height: 1.5;
 }
 
-
-
-
-
 .mobileWorkMenu {
 	position: fixed;
 	width: 100vw;
 	overflow: hidden;
 	height: 0;
-	background-color: #292929;
+	background-color: var(--blackboard);
 	z-index: 1000;
 	transition: 1s ease-in-out;
 	display: none;
@@ -176,7 +162,7 @@
 	position: absolute;
 	top:5vh;
 	left: 8vw;
-	color: white;
+	color: var(--blackboard-text);
 	font-size: 2em;
 }
 
@@ -185,31 +171,31 @@
 }
 
 .mobileWorkMenuContent h2 {
-	font-size: 2em;
-	color: white; 
+	font-size: 1.5em;
+	color: var(--blackboard-text); 
 	font-family: 'edition', sans-serif;
 }
 
 .mobileWorkMenuContent p {
-	font-size: 0.85em;
-	color: white; 
+	font-size: 0.9em;
+	color: var(--blackboard-text); 
 	font-family: 'poppins', sans-serif;
 }
 .mobileWorkMenuContent a {
 	text-decoration: none;
 	font-size: 1em;
-	color: white; 
+	color: var(--link); 
 	font-family: 'poppins', sans-serif;
-	border:0.3vw solid white;
-	padding: 1vw 2vw;
+	border:0.15em solid var(--link);
+	padding: 0.5em 1em;
 	display: flex;
 	width:fit-content;
 	align-items: center;
-	margin:1.3vw 0 1vw 0;
+	margin:2em 0 1vw 0;
 }
 
 .mobileWorkMenuContent .stats {
-	margin-top: 5%;
+	margin-top: 2em;
 	display: flex;
 	flex-direction: row;
 }
@@ -219,15 +205,15 @@
 }
 
 .mobileWorkMenuContent .stats h4{
-	font-size: 0.85em;
-	color: white; 
+	font-size: 0.9em;
+	color: var(--blackboard-text); 
 	font-family: 'edition', sans-serif;
 	line-height: 0;
 }
 
 .mobileWorkMenuContent .stats h6{
-	font-size: 0.85em;
-	color: white; 
+	font-size: 0.9em;
+	color: var(--blackboard-text); 
 	font-family: 'poppins', sans-serif;
 	font-weight: 300;
 	margin-top: 0;

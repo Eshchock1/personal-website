@@ -39,12 +39,12 @@ const style = {
     },
     ballContainer3: {
         position: "absolute",
-        top: "96vh",
-        left: "52vw",
+        top: "90vh",
+        left: "47vw",
     },
     ballContainer4: {
         position: "absolute",
-        top: "33vh",
+        top: "40vh",
         left: "78vw",
     },
     ballContainer5: {
@@ -132,7 +132,7 @@ updateWindowDimensions() {
                                     stiffness: 50,
                                 damping: 8,
                                 },}}>
-                            <div className="ball3"></div>
+                            <img src={require('../assets/item3.png')} style={{width:'20vw'}}/>
                         </ParallaxMousemove.Layer>
                     </div>
                     <div style={style.ballContainer4}>
@@ -145,7 +145,7 @@ updateWindowDimensions() {
                                     stiffness: 50,
                                 damping: 8,
                                 },}}>
-                            <div className="ball4"></div>
+                            <img src={require('../assets/item4.png')} style={{width:'14vw'}}/>
                         </ParallaxMousemove.Layer>
                     </div>
                     <div style={style.ballContainer1}>
@@ -158,7 +158,7 @@ updateWindowDimensions() {
                                     stiffness: 50,
                                 damping: 8,
                                 },}}>
-                            <div className="ball1"></div>
+                            <img src={require('../assets/item5.png')} style={{width:'15.6vw'}}/>
                         </ParallaxMousemove.Layer>
                     </div>
                 </ParallaxMousemove>
@@ -175,7 +175,7 @@ updateWindowDimensions() {
                                     stiffness: 50,
                                 damping: 8,
                                 },}}>
-                            <div className="ball6"></div>
+                            <img src={require('../assets/item6.png')} style={{width:'9vw', transform: 'rotateZ(150deg)'}}/>
                         </ParallaxMousemove.Layer>
                     </div>
 
@@ -189,7 +189,7 @@ updateWindowDimensions() {
                                     stiffness: 50,
                                 damping: 8,
                                 },}}>
-                            <div className="ball2"></div>
+                            <img src={require('../assets/item2.png')} style={{width:'8vw'}}/>
                         </ParallaxMousemove.Layer>
                     </div>
                     <div style={style.ballContainer5}>
@@ -202,7 +202,7 @@ updateWindowDimensions() {
                                     stiffness: 50,
                                     damping: 8,
                                 },}}>
-                            <div className="ball5"></div>
+                            <img src={require('../assets/item1.png')} style={{width:'15vw'}}/>
                         </ParallaxMousemove.Layer>
                     </div>
                 </ParallaxMousemove>
