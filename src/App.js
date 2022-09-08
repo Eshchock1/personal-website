@@ -72,11 +72,18 @@ class App extends React.Component {
             <div className="contactMenu">
               <HamburgerMenu
                 isOpen={true}
-                menuClicked={() =>
+                menuClicked={() => {
                   this.setState({
-                    ContactContainerClassList: "ContactContainer",
+                    ContactContainerClassList: "ContactContainer ContactContainerUnloading",
                   })
-                }
+                  setTimeout(() => {
+                    if (this.state.ContactContainerClassList === "ContactContainer ContactContainerUnloading") {
+                      this.setState({
+                        ContactContainerClassList: "ContactContainer",
+                      })
+                    }
+                  }, 800);
+                }}
                 width={
                   this.state.width <= 768
                     ? 0.075 * this.state.width
