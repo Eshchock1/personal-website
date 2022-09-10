@@ -254,7 +254,7 @@ html, body {
 .socials {
 	position: fixed;
 	justify-self: center;
-	left: 0.5vw;
+	left: 0;
 	z-index: 20;
 }
 
@@ -270,13 +270,13 @@ html, body {
 
 .socials a {
 	color: var(--text);
-	font-size: 2vw;
+	font-size: 2.2em;
 }
 
 .links {
 	position: fixed;
-	bottom:4vw;
-	right:3vw;
+	bottom:4vh;
+	right:2vw;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
@@ -294,7 +294,7 @@ html, body {
 	color:var(--text);
 	margin:0.3vw 0;
 	text-decoration: none;
-	font-size: 1.45vw;
+	font-size: 1.6em;
 	display: block;
 	text-align: left !important;
 	// text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.425);

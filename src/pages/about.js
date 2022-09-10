@@ -53,14 +53,6 @@ export default class About extends React.Component {
               <a
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
-                href="https://monument.app/"
-                rel="noopener noreferrer"
-              >
-                Monument.app
-              </a>{" "}
-              <a
-                target="_blank"
-                style={{ color: "white", fontWeight: 500 }}
                 href="https://bitswap.network/"
                 rel="noopener noreferrer"
               >

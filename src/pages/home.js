@@ -7,9 +7,9 @@ const style = {
     layerStyle1: {
         position: "absolute",
     },
-    layerStyle2: {
-        position: "absolute",
-    },
+    // layerStyle2: {
+    //     position: "absolute",
+    // },
     layerStyle3: {
         position: "absolute",
     },
@@ -32,11 +32,11 @@ const style = {
         top: "44vh",
         left: "10vw",
     },
-    ballContainer2: {
-        position: "absolute",
-        top: "52vh",
-        left: "45vw",
-    },
+    // ballContainer2: {
+    //     position: "absolute",
+    //     top: "52vh",
+    //     left: "45vw",
+    // },
     ballContainer3: {
         position: "absolute",
         top: "90vh",
@@ -179,7 +179,7 @@ updateWindowDimensions() {
                         </ParallaxMousemove.Layer>
                     </div>
 
-                    <div style={style.ballContainer2}>
+                    {/* <div style={style.ballContainer2}>
                         <ParallaxMousemove.Layer
                             layerStyle={style.layerStyle2}
                             config={{
@@ -191,7 +191,7 @@ updateWindowDimensions() {
                                 },}}>
                             <img src={require('../assets/item2.png')} style={{width:'8vw'}}/>
                         </ParallaxMousemove.Layer>
-                    </div>
+                    </div> */}
                     <div style={style.ballContainer5}>
                         <ParallaxMousemove.Layer
                             layerStyle={style.layerStyle5}
