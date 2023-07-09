@@ -33,10 +33,10 @@ export default class About extends React.Component {
              <a
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
-                href="https://www.rossvideo.com/"
+                href="https://www.cisco.com/"
                 rel="noopener noreferrer"
               >
-                Ross Video
+                Cisco
               </a>{" "}and building{" "}
               <a
                 target="_blank"
@@ -46,10 +46,18 @@ export default class About extends React.Component {
               >
                 useunify.app
               </a>{" "}
-              while pursuing a degree in computer science at the University of
+              while pursuing a bachelor's degree in computer science at the University of
               Toronto. I am always exploring enriching opportunities with
               pioneering technology I can implement to change the world. In the
               past, I’ve worked with{" "}
+              <a
+                target="_blank"
+                style={{ color: "white", fontWeight: 500 }}
+                href="https://www.rossvideo.com/"
+                rel="noopener noreferrer"
+              >
+                Ross Video
+              </a>,{" "}
               <a
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
