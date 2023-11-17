@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import "./styles/App.css";
 import Home from "./pages/home";
 import About from "./pages/about";
@@ -6,57 +6,82 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Portfolio from "./pages/portfolio";
 import "./styles/home.scss";
-import ReactFullpage from "@fullpage/react-fullpage";
 import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
 import HamburgerMenu from "react-hamburger-menu";
+import ReactPageScroller from 'react-page-scroller';
 
-class App extends React.Component {
-  handleClick() {
-    this.setState({
-      open: !this.state.open,
-    });
-    if (this.state.menuClassList === "menu") {
-      this.setState({
-        menuClassList: "menu menuActive",
-      });
+const App = () => {
+  const handleClick = () => {
+    setOpen(!open)
+    if (menuClassList === "menu") {
+      setMenuClassList("menu menuActive")
     } else {
-      this.setState({
-        menuClassList: "menu",
-      });
+      setMenuClassList("menu")
     }
   }
 
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener("resize", this.updateWindowDimensions);
+  useEffect(() => {
+    updateWindowDimensions();
+    window.addEventListener("resize", updateWindowDimensions);
     AOS.init({
       duration: 2000,
     });
+    return () => {
+      window.removeEventListener("resize", updateWindowDimensions);
+    }
+  }, [])
+
+  const updateWindowDimensions = () => {
+    setWidth(window.innerWidth)
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWindowDimensions);
+  const handlePageChange = (num) => {
+    document.getElementById("strike0").classList.remove("activeStrike");
+    document.getElementById("strike1").classList.remove("activeStrike");
+    document.getElementById("strike2").classList.remove("activeStrike");
+    document.getElementById("strike" + num).classList.add("activeStrike");
   }
 
-  updateWindowDimensions() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  const handleScrollUnavailable = () => {
+    // the end
+    if (currentpage.current > 0) {
+      setContactContainerClassList("ContactContainer ContactContainerActive")
+    }
   }
-  constructor(props) {
-    super(props);
-    this.myRef = React.createRef();
-    this.state = {
-      width: 0,
-      height: 0,
-      open: false,
-      menuClassList: "menu",
-      currentSocial: "",
-      ContactContainerClassList: "ContactContainer",
-      loading: "loading",
-      website: "websiteContainer",
-    };
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-  }
-  render() {
+
+    const currentpage = useRef(0);
+    const [width, setWidth] = useState(0)
+    const [open, setOpen] = useState(false)
+    const [menuClassList, setMenuClassList] = useState("menu")
+    const [currentSocial, setCurrentSocial] = useState("")
+    const [contactContainerClassList, setContactContainerClassList] = useState("ContactContainer")
+    const [activepage, setActivepage] = useState(0)
+  
+
+    const scroller = useMemo(() => {
+      return (
+      <ReactPageScroller
+        onBeforePageScroll={handlePageChange}
+        pageOnChange={(num)=>currentpage.current = num}
+        animationTimer={900}
+        animationTimerBuffer={0}
+        renderAllPagesOnFirstRender
+        transitionTimingFunction="ease-in-out"
+        customPageNumber={activepage}
+        handleScrollUnavailable={handleScrollUnavailable}
+      >
+        <div className="section">
+          <Home />
+        </div>
+        <div className="section aboutPage">
+          <About />
+        </div>
+        <div className="section">
+          <Portfolio />
+        </div>
+      </ReactPageScroller>)
+      }, [activepage])
+
     return (
       <div
         style={{
@@ -67,47 +92,43 @@ class App extends React.Component {
           width: "100vw",
         }}
       >
-        <div className={this.state.ContactContainerClassList}>
+        <div className={contactContainerClassList}>
           <div className="contactInner">
             <div className="contactMenu">
               <HamburgerMenu
                 isOpen={true}
                 menuClicked={() => {
-                  this.setState({
-                    ContactContainerClassList: "ContactContainer ContactContainerUnloading",
-                  })
+                  setContactContainerClassList("ContactContainer ContactContainerUnloading")
                   setTimeout(() => {
-                    if (this.state.ContactContainerClassList === "ContactContainer ContactContainerUnloading") {
-                      this.setState({
-                        ContactContainerClassList: "ContactContainer",
-                      })
+                    if (contactContainerClassList === "ContactContainer ContactContainerUnloading") {
+                      setContactContainerClassList("ContactContainer")
                     }
                   }, 800);
                 }}
                 width={
-                  this.state.width <= 768
-                    ? 0.075 * this.state.width
-                    : this.state.width <= 991
-                    ? 0.05 * this.state.width
-                    : this.state.width <= 1366
-                    ? 0.05 * this.state.width
-                    : 0.02 * this.state.width
+                  width <= 768
+                    ? 0.075 * width
+                    : width <= 991
+                    ? 0.05 * width
+                    : width <= 1366
+                    ? 0.05 * width
+                    : 0.02 * width
                 }
                 height={
-                  this.state.width <= 991
-                    ? 0.04 * this.state.width
-                    : this.state.width <= 1366
-                    ? 0.04 * this.state.width
-                    : 0.02 * this.state.width
+                  width <= 991
+                    ? 0.04 * width
+                    : width <= 1366
+                    ? 0.04 * width
+                    : 0.02 * width
                 }
                 strokeWidth={
-                  this.state.width <= 768
-                    ? 0.006 * this.state.width
-                    : this.state.width <= 991
-                    ? 0.004 * this.state.width
-                    : this.state.width <= 1366
-                    ? 0.005 * this.state.width
-                    : 0.0015 * this.state.width
+                  width <= 768
+                    ? 0.006 * width
+                    : width <= 991
+                    ? 0.004 * width
+                    : width <= 1366
+                    ? 0.005 * width
+                    : 0.0015 * width
                 }
                 rotate={0}
                 color="white"
@@ -137,7 +158,7 @@ class App extends React.Component {
               <h2
                 id="social1"
                 onMouseEnter={() =>
-                  this.setState({ currentSocial: "Linkedin" })
+                  setCurrentSocial("Linkedin")
                 }
               >
                 <a href="https://www.linkedin.com/in/eshwara-chock/">
@@ -146,7 +167,7 @@ class App extends React.Component {
               </h2>
               <h2
                 id="social2"
-                onMouseEnter={() => this.setState({ currentSocial: "Github" })}
+                onMouseEnter={() => setCurrentSocial("Github")}
               >
                 {" "}
                 <a href="http://github.com/Eshchock1">
@@ -156,7 +177,7 @@ class App extends React.Component {
               <h2
                 id="social3"
                 onMouseEnter={() =>
-                  this.setState({ currentSocial: "Instagram" })
+                  setCurrentSocial("Instagram")
                 }
               >
                 <a href="https://www.instagram.com/eshwara_chock/">
@@ -164,7 +185,7 @@ class App extends React.Component {
                 </a>
               </h2>
               <div className="break"></div>
-              <h3 id="currentSocial">{this.state.currentSocial}</h3>
+              <h3 id="currentSocial">{currentSocial}</h3>
             </div>
           </div>
         </div>
@@ -178,27 +199,24 @@ class App extends React.Component {
           data-aos-duration="1000"
           data-aos-delay="0"
         >
-          <button onClick={() => window.fullpage_api.moveTo(1)}>
+          <button onClick={() => setActivepage(0)}>
             <span className="strike activeStrike" id="strike0">
               Intro
             </span>
           </button>
-          <button onClick={() => window.fullpage_api.moveTo(2)}>
+          <button onClick={() => setActivepage(1)}>
             <span className="strike" id="strike1">
               About
             </span>
           </button>
-          <button onClick={() => window.fullpage_api.moveTo(3)}>
+          <button onClick={() => setActivepage(2)}>
             <span className="strike" id="strike2">
               Portfolio
             </span>
           </button>
           <button
             onClick={() =>
-              this.setState({
-                ContactContainerClassList:
-                  "ContactContainer ContactContainerActive",
-              })
+              setContactContainerClassList("ContactContainer ContactContainerActive")
             }
           >
             CONTACT
@@ -213,31 +231,31 @@ class App extends React.Component {
           data-aos-delay="0"
         >
           <HamburgerMenu
-            isOpen={this.state.open}
-            menuClicked={this.handleClick.bind(this)}
+            isOpen={open}
+            menuClicked={handleClick}
             width={
-              this.state.width <= 768
-                ? 0.075 * this.state.width
-                : this.state.width <= 991
-                ? 0.05 * this.state.width
-                : this.state.width <= 1366
-                ? 0.05 * this.state.width
+              width <= 768
+                ? 0.075 * width
+                : width <= 991
+                ? 0.05 * width
+                : width <= 1366
+                ? 0.05 * width
                 : 0
             }
             height={
-              this.state.width <= 991
-                ? 0.04 * this.state.width
-                : this.state.width <= 1366
-                ? 0.04 * this.state.width
+              width <= 991
+                ? 0.04 * width
+                : width <= 1366
+                ? 0.04 * width
                 : 0
             }
             strokeWidth={
-              this.state.width <= 768
-                ? 0.006 * this.state.width
-                : this.state.width <= 991
-                ? 0.004 * this.state.width
-                : this.state.width <= 1366
-                ? 0.005 * this.state.width
+              width <= 768
+                ? 0.006 * width
+                : width <= 991
+                ? 0.004 * width
+                : width <= 1366
+                ? 0.005 * width
                 : 0
             }
             rotate={0}
@@ -246,16 +264,14 @@ class App extends React.Component {
             animationDuration={0.5}
           />
         </div>
-        <div className={this.state.menuClassList}>
+        <div className={menuClassList}>
           <ul>
             <li>
               <button
                 onClick={() => {
-                  window.fullpage_api.moveTo(1);
-                  this.setState({
-                    menuClassList: "menu",
-                    open: !this.state.open,
-                  });
+                  setActivepage(0)
+                  setMenuClassList("menu")
+                  setOpen(!open)
                 }}
               >
                 Intro
@@ -264,11 +280,9 @@ class App extends React.Component {
             <li>
               <button
                 onClick={() => {
-                  window.fullpage_api.moveTo(2);
-                  this.setState({
-                    menuClassList: "menu",
-                    open: !this.state.open,
-                  });
+                  setActivepage(1)
+                    setMenuClassList("menu")
+                  setOpen(!open)
                 }}
               >
                 About
@@ -278,11 +292,9 @@ class App extends React.Component {
             <li>
               <button
                 onClick={() => {
-                  window.fullpage_api.moveTo(3);
-                  this.setState({
-                    menuClassList: "menu",
-                    open: !this.state.open,
-                  });
+                  setActivepage(2)
+                  setMenuClassList("menu")
+                  setOpen(!open)
                 }}
               >
                 Portfolio
@@ -340,41 +352,9 @@ class App extends React.Component {
           </ul>
         </div>
 
-        <ReactFullpage
-          scrollingSpeed={1000}
-          dragAndMove
-          loopBottom
-          navigation={false}
-          // navigationPosition="right"
-          onLeave={(origin, destination) => {
-            document
-              .getElementById("strike" + destination.index)
-              .classList.add("activeStrike");
-            document
-              .getElementById("strike" + origin.index)
-              .classList.remove("activeStrike");
-          }}
-          render={() => {
-            return (
-              <div>
-                <ReactFullpage.Wrapper>
-                  <div className="section">
-                    <Home />
-                  </div>
-                  <div className="section aboutPage">
-                    <About />
-                  </div>
-                  <div className="section">
-                    <Portfolio />
-                  </div>
-                </ReactFullpage.Wrapper>
-              </div>
-            );
-          }}
-        />
+        {scroller}
       </div>
     );
   }
-}
 
 export default App;

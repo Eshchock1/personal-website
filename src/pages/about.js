@@ -26,18 +26,10 @@ export default class About extends React.Component {
               <span className="noFont">.</span>
             </h1>
             <h3 className="subtitle">
-              A 19 year old developer from Ottawa, Canada.
+              A 20 year old developer from Toronto, Canada.
             </h3>
             <p className="content">
-             I’m currently working as a Software Developer at{" "}
-             <a
-                target="_blank"
-                style={{ color: "white", fontWeight: 500 }}
-                href="https://www.cisco.com/"
-                rel="noopener noreferrer"
-              >
-                Cisco
-              </a>{" "}and building{" "}
+             I’m currently building{" "}
               <a
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
@@ -49,7 +41,15 @@ export default class About extends React.Component {
               while pursuing a bachelor's degree in computer science at the University of
               Toronto. I am always exploring enriching opportunities with
               pioneering technology I can implement to change the world. In the
-              past, I’ve worked with{" "}
+              past, I’ve worked at{" "}
+              <a
+                target="_blank"
+                style={{ color: "white", fontWeight: 500 }}
+                href="https://www.cisco.com/"
+                rel="noopener noreferrer"
+              >
+                Cisco
+              </a>,{" "}
               <a
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
@@ -57,7 +57,7 @@ export default class About extends React.Component {
                 rel="noopener noreferrer"
               >
                 Ross Video
-              </a>,{" "}
+              </a>, Monument,{" "}
               <a
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
@@ -66,7 +66,7 @@ export default class About extends React.Component {
               >
                 Bitswap
               </a>
-              ,{" "}
+              , and{" "}
               <a
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
@@ -74,17 +74,7 @@ export default class About extends React.Component {
                 rel="noopener noreferrer"
               >
                 SnapSmile
-              </a>
-              , and{" "}
-              <a
-                target="_blank"
-                style={{ color: "white", fontWeight: 500 }}
-                href="https://digitera.agency/"
-                rel="noopener noreferrer"
-              >
-                Digitera.Interactive
-              </a>
-              . In my spare time, you might catch me playing badminton, coding,
+              </a>, and in my spare time, you might catch me playing badminton, coding,
               drawing, learning, and competing in hackathons. Feel free to take
               a look at some of my work on{" "}
               <a
