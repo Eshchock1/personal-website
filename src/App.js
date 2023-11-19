@@ -55,7 +55,7 @@ const App = () => {
     const [menuClassList, setMenuClassList] = useState("menu")
     const [currentSocial, setCurrentSocial] = useState("")
     const [contactContainerClassList, setContactContainerClassList] = useState("ContactContainer")
-    const [activepage, setActivepage] = useState(0)
+    const [activepage, setActivepage] = useState(-1)
   
 
     const scroller = useMemo(() => {
