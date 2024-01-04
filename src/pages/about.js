@@ -61,7 +61,7 @@ export default class About extends React.Component {
               <a
                 target="_blank"
                 style={{ color: "white", fontWeight: 500 }}
-                href="https://bitswap.network/"
+                href="https://twitter.com/bitswapnetwork"
                 rel="noopener noreferrer"
               >
                 Bitswap
@@ -83,7 +83,7 @@ export default class About extends React.Component {
                 href="http://github.com/Eshchock1"
                 rel="noopener noreferrer"
               >
-                Github
+                GitHub
               </a>{" "}
               or{" "}
               <a
